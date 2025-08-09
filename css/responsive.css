@@ -978,6 +978,14 @@
         color: #e0e0e0;
     }
     
+    .tea-definition {
+        color: #e0e0e0 !important;
+    }
+    
+    .intro-text p:not(.tea-definition) {
+        color: #e0e0e0 !important;
+    }
+    
     .top-bar {
         background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
         border-bottom-color: #444;

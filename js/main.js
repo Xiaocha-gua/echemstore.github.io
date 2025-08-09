@@ -301,24 +301,22 @@ function showMessage(message, type = 'info') {
 
 // 滚动效果
 function initScrollEffects() {
-    let lastScrollTop = 0;
     const nav = document.querySelector('.main-nav');
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        // 导航栏滚动效果
+        // 导航栏滚动效果 - 保持固定在顶部
         if (nav) {
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // 向下滚动，隐藏导航栏
-                nav.style.transform = 'translateY(-100%)';
+            // 添加滚动时的阴影效果
+            if (scrollTop > 50) {
+                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+                nav.style.backdropFilter = 'blur(10px)';
             } else {
-                // 向上滚动，显示导航栏
-                nav.style.transform = 'translateY(0)';
+                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                nav.style.backdropFilter = 'none';
             }
         }
-        
-        lastScrollTop = scrollTop;
         
         // 滚动到顶部按钮
         toggleScrollToTopButton(scrollTop);

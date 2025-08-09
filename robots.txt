@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# 禁止访问后台和临时文件
+Disallow: /.trae/
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.backup$
+Disallow: /*.md$
+
+# 允许访问重要页面
+Allow: /index.html
+Allow: /index-en.html
+Allow: /product-*.html
+Allow: /service-*.html
+Allow: /contact*.html
+
+# Sitemap位置
+Sitemap: https://www.echemstore.com/sitemap.xml
+
+# 爬虫延迟（可选）
+Crawl-delay: 1

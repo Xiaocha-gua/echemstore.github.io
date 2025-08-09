@@ -180,3 +180,15 @@ echemstore网页/
   - product-multichannel-hydrogen-system.html（多通道制氢系统）
   - product-co2-electrolysis-system.html（电解二氧化碳系统）
 - ✅ 更新项目结构文档，反映当前文件组织状态
+
+### 2025-01-14 (第二次文件夹整理)
+- ✅ 移动产品设计文档到.trae文件夹：
+  - desktop-water-electrolysis-design.md → 20_desktop_water_electrolysis_design.md
+  - bench-water-electrolysis-design.md → 21_bench_water_electrolysis_design.md
+  - multi-channel-water-electrolysis-design-document.md → 22_multichannel_water_electrolysis_design.md
+  - co2-electrolysis-system-design.md → 23_co2_electrolysis_system_design.md
+- ✅ 移动其他文档到.trae文件夹：
+  - subpages-content-summary.md → 24_subpages_content_summary.md
+  - website-content-design.md → 25_website_content_design.md
+- ✅ 统一文件命名规范，便于管理和查找
+- ✅ 根目录现在更加整洁，只保留核心的HTML、CSS、JS文件和主要项目文档

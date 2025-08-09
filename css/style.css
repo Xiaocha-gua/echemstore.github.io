@@ -48,6 +48,64 @@ body {
     border: 2px solid #667eea;
 }
 
+/* 面包屑导航样式 */
+.breadcrumb {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.breadcrumb ol {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '>';
+    margin: 0 8px;
+    color: #999;
+    font-weight: normal;
+}
+
+.breadcrumb a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.breadcrumb li:last-child span {
+    color: #333;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        margin: 15px 0;
+    }
+    
+    .breadcrumb ol {
+        font-size: 12px;
+    }
+    
+    .breadcrumb li:not(:last-child)::after {
+        margin: 0 6px;
+    }
+}
+
 .btn-secondary:hover {
     background: #667eea;
     color: white;
@@ -832,29 +890,15 @@ body {
     padding-right: 20px;
 }
 
-/* TEA定义段落特殊样式 */
-.tea-definition {
-    background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
-    border-left: 4px solid #667eea;
-    padding: 16px 20px;
-    margin: 16px 0 20px 0;
-    border-radius: 0 8px 8px 0;
-    font-weight: 500;
-    color: #2d3748;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
-    position: relative;
+.intro-text p:not(.tea-definition) {
+    color: #333;
 }
 
-.tea-definition::before {
-    content: "💡";
-    position: absolute;
-    left: -2px;
-    top: 16px;
-    font-size: 18px;
-    background: white;
-    padding: 2px;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* TEA定义段落特殊样式 */
+.tea-definition {
+    margin: 16px 0 20px 0;
+    font-weight: 400;
+    color: #333;
 }
 
 .product-image-main {
@@ -2677,7 +2721,7 @@ body {
 
 .service-subtitle {
     font-size: 18px;
-    color: #666;
+    color: #7f8c8d;
     font-weight: 500;
 }
 
@@ -4627,12 +4671,16 @@ h2, h3, h4 {
 
 /* 主导航栏 */
 .main-nav {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
     transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .nav-content {
@@ -4786,6 +4834,11 @@ h2, h3, h4 {
 
 .dropdown-menu li a:hover::before {
     left: 100%;
+}
+
+/* 页面主体内容 - 为固定导航栏留出空间 */
+body {
+    padding-top: 80px; /* 导航栏高度 */
 }
 
 /* 英雄区域 */
