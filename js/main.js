@@ -486,8 +486,8 @@ window.addEventListener('load', function() {
 
 // 产品滑动功能
 let sliderStates = {
-    hydrogen: { currentIndex: 0, totalItems: 5 },
-    co2: { currentIndex: 0, totalItems: 4 },
+    components: { currentIndex: 0, totalItems: 6 },
+    systems: { currentIndex: 0, totalItems: 4 },
     consulting: { currentIndex: 0, totalItems: 3 }
 };
 
