@@ -488,6 +488,7 @@ window.addEventListener('load', function() {
 let sliderStates = {
     components: { currentIndex: 0, totalItems: 6 },
     systems: { currentIndex: 0, totalItems: 4 },
+    equipment: { currentIndex: 0, totalItems: 2 },
     consulting: { currentIndex: 0, totalItems: 3 }
 };
 
