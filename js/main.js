@@ -486,8 +486,8 @@ window.addEventListener('load', function() {
 
 // 产品滑动功能
 let sliderStates = {
-    components: { currentIndex: 0, totalItems: 6 },
-    systems: { currentIndex: 0, totalItems: 4 },
+    components: { currentIndex: 0, totalItems: 7 },
+    systems: { currentIndex: 0, totalItems: 6 },
     equipment: { currentIndex: 0, totalItems: 2 },
     consulting: { currentIndex: 0, totalItems: 3 }
 };
