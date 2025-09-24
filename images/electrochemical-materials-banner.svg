@@ -1,0 +1,157 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 渐变背景定义 -->
+  <defs>
+    <!-- 主背景渐变 -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#43e97b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 装饰性几何图案渐变 -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- 产品圆形背景渐变 -->
+    <radialGradient id="productBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.7" />
+    </radialGradient>
+    
+    <!-- 阴影滤镜 -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- 主背景 -->
+  <rect width="800" height="300" fill="url(#mainGradient)"/>
+  
+  <!-- 装饰性几何图案 -->
+  <g opacity="0.3">
+    <!-- 左上角装饰线条 -->
+    <path d="M0,0 L150,0 L120,30 L0,30 Z" fill="url(#accentGradient)"/>
+    <circle cx="80" cy="60" r="3" fill="#ffffff" opacity="0.6"/>
+    <circle cx="120" cy="40" r="2" fill="#ffffff" opacity="0.4"/>
+    
+    <!-- 右下角装饰线条 -->
+    <path d="M650,270 L800,270 L800,300 L680,300 Z" fill="url(#accentGradient)"/>
+    <circle cx="720" cy="240" r="2.5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="760" cy="220" r="1.5" fill="#ffffff" opacity="0.3"/>
+    
+    <!-- 连接线条 -->
+    <path d="M100,100 Q200,80 300,120" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.4"/>
+    <path d="M500,180 Q600,160 700,200" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- 主标题文字 -->
+  <text x="60" y="120" font-family="Microsoft YaHei, Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff">
+    电化学核心材料
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="60" y="160" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#ffffff" opacity="0.9">
+    专业的电化学材料解决方案
+  </text>
+  
+  <!-- 装饰线条 -->
+  <rect x="60" y="180" width="200" height="4" fill="#ffffff" opacity="0.8" rx="2"/>
+  
+  <!-- 产品展示区域 - 大圆形背景 -->
+  <circle cx="650" cy="150" r="120" fill="url(#productBg)" filter="url(#shadow)" opacity="0.9"/>
+  <circle cx="650" cy="150" r="115" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+  
+  <!-- 6个产品小圆形布局 -->
+  <!-- 产品1: 阴离子交换膜 (顶部) -->
+  <g transform="translate(650,80)">
+    <circle r="25" fill="#ffffff" filter="url(#shadow)"/>
+    <circle r="22" fill="#f8f9fa"/>
+    <!-- 简化的膜材料图标 -->
+    <rect x="-15" y="-8" width="30" height="3" fill="#667eea" rx="1"/>
+    <rect x="-15" y="-3" width="30" height="3" fill="#764ba2" rx="1"/>
+    <rect x="-15" y="2" width="30" height="3" fill="#667eea" rx="1"/>
+    <rect x="-15" y="7" width="30" height="3" fill="#764ba2" rx="1"/>
+  </g>
+  
+  <!-- 产品2: PPS隔膜 (右上) -->
+  <g transform="translate(710,110)">
+    <circle r="22" fill="#ffffff" filter="url(#shadow)"/>
+    <circle r="19" fill="#f8f9fa"/>
+    <!-- 简化的隔膜图标 -->
+    <rect x="-12" y="-6" width="24" height="2" fill="#43e97b" rx="1"/>
+    <rect x="-12" y="-2" width="24" height="2" fill="#00f2fe" rx="1"/>
+    <rect x="-12" y="2" width="24" height="2" fill="#43e97b" rx="1"/>
+    <rect x="-12" y="6" width="24" height="2" fill="#00f2fe" rx="1"/>
+  </g>
+  
+  <!-- 产品3: 桌面式电解水制氢系统 (右下) -->
+  <g transform="translate(710,190)">
+    <circle r="22" fill="#ffffff" filter="url(#shadow)"/>
+    <circle r="19" fill="#f8f9fa"/>
+    <!-- 简化的桌面系统图标 -->
+    <rect x="-10" y="-8" width="20" height="12" fill="#4facfe" rx="2"/>
+    <rect x="-8" y="-6" width="16" height="2" fill="#ffffff" rx="1"/>
+    <rect x="-8" y="-2" width="16" height="2" fill="#ffffff" rx="1"/>
+    <circle cx="0" cy="6" r="3" fill="#667eea"/>
+  </g>
+  
+  <!-- 产品4: 台架式电解水制氢系统 (底部) -->
+  <g transform="translate(650,220)">
+    <circle r="25" fill="#ffffff" filter="url(#shadow)"/>
+    <circle r="22" fill="#f8f9fa"/>
+    <!-- 简化的台架系统图标 -->
+    <rect x="-12" y="-10" width="24" height="16" fill="#00f2fe" rx="2"/>
+    <rect x="-10" y="-8" width="20" height="3" fill="#ffffff" rx="1"/>
+    <rect x="-10" y="-3" width="20" height="3" fill="#ffffff" rx="1"/>
+    <rect x="-10" y="2" width="20" height="3" fill="#ffffff" rx="1"/>
+    <circle cx="0" cy="8" r="2" fill="#43e97b"/>
+  </g>
+  
+  <!-- 产品5: 电解池 (左下) -->
+  <g transform="translate(590,190)">
+    <circle r="22" fill="#ffffff" filter="url(#shadow)"/>
+    <circle r="19" fill="#f8f9fa"/>
+    <!-- 简化的电解池图标 -->
+    <rect x="-10" y="-8" width="20" height="16" fill="none" stroke="#667eea" stroke-width="2" rx="2"/>
+    <line x1="-6" y1="-4" x2="6" y2="-4" stroke="#764ba2" stroke-width="2"/>
+    <line x1="-6" y1="0" x2="6" y2="0" stroke="#764ba2" stroke-width="2"/>
+    <line x1="-6" y1="4" x2="6" y2="4" stroke="#764ba2" stroke-width="2"/>
+  </g>
+  
+  <!-- 产品6: 多孔扩散层 (左上) -->
+  <g transform="translate(590,110)">
+    <circle r="22" fill="#ffffff" filter="url(#shadow)"/>
+    <circle r="19" fill="#f8f9fa"/>
+    <!-- 简化的多孔扩散层图标 -->
+    <circle cx="-6" cy="-6" r="2" fill="#43e97b"/>
+    <circle cx="6" cy="-6" r="2" fill="#43e97b"/>
+    <circle cx="-6" cy="0" r="2" fill="#00f2fe"/>
+    <circle cx="6" cy="0" r="2" fill="#00f2fe"/>
+    <circle cx="-6" cy="6" r="2" fill="#43e97b"/>
+    <circle cx="6" cy="6" r="2" fill="#43e97b"/>
+    <circle cx="0" cy="-3" r="1.5" fill="#4facfe"/>
+    <circle cx="0" cy="3" r="1.5" fill="#4facfe"/>
+  </g>
+  
+  <!-- 中心装饰元素 -->
+  <circle cx="650" cy="150" r="8" fill="#ffffff" opacity="0.8"/>
+  <circle cx="650" cy="150" r="5" fill="#667eea"/>
+  
+  <!-- 连接线条 -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.4" fill="none">
+    <line x1="650" y1="105" x2="650" y2="125"/>
+    <line x1="688" y1="132" x2="672" y2="142"/>
+    <line x1="688" y1="168" x2="672" y2="158"/>
+    <line x1="650" y1="195" x2="650" y2="175"/>
+    <line x1="612" y1="168" x2="628" y2="158"/>
+    <line x1="612" y1="132" x2="628" y2="142"/>
+  </g>
+  
+  <!-- 热销标签 -->
+  <g transform="translate(720,60)">
+    <rect x="-25" y="-8" width="50" height="16" fill="#ff6b6b" rx="8" filter="url(#shadow)"/>
+    <text x="0" y="2" font-family="Microsoft YaHei, Arial, sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">热销产品</text>
+  </g>
+</svg>
