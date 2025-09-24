@@ -9,18 +9,19 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="product">
-    <meta property="og:url" content="https://echemstore.com/product-porous-diffusion-layer.html">
+    <meta property="og:url" content="https://echemstore.cn/product-porous-diffusion-layer.html">
     <meta property="og:title" content="气体扩散层GDL多孔扩散层-钛纤维毡镍纤维毡-制氢燃料电池-echemstore">
     <meta property="og:description" content="echemstore专业供应气体扩散层GDL，钛纤维毡镍纤维毡多孔扩散层，孔隙率50-90%可定制，广泛应用于制氢电解池、燃料电池系统，高导电性耐腐蚀。">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://echemstore.com/product-porous-diffusion-layer.html">
+    <meta property="twitter:url" content="https://echemstore.cn/product-porous-diffusion-layer.html">
     <meta property="twitter:title" content="气体扩散层GDL多孔扩散层-钛纤维毡镍纤维毡-制氢燃料电池-echemstore">
     <meta property="twitter:description" content="echemstore专业供应气体扩散层GDL，钛纤维毡镍纤维毡多孔扩散层，孔隙率50-90%可定制，广泛应用于制氢电解池、燃料电池系统，高导电性耐腐蚀。">
     
-    <link rel="canonical" href="https://echemstore.com/product-porous-diffusion-layer.html">
-    <link rel="alternate" hreflang="zh-CN" href="https://echemstore.com/product-porous-diffusion-layer.html">
+    <link rel="canonical" href="https://echemstore.cn/product-porous-diffusion-layer.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://echemstore.cn/product-porous-diffusion-layer.html">
+    <link rel="alternate" hreflang="en-GB" href="https://echemstore.cn/product-porous-diffusion-layer-en.html">
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -29,16 +30,19 @@
             text-align: center;
         }
         
-        .product-image {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
+        .product-series-image {
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            background: #f8f9fa;
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
         }
         
-        .product-image:hover {
+        .product-series-image:hover {
             transform: scale(1.02);
         }
         
@@ -151,6 +155,15 @@
         
         /* 响应式设计 */
         @media (max-width: 768px) {
+            .product-image {
+                max-width: 100%;
+                height: 300px;
+            }
+            
+            .product-series-image {
+            height: 280px;
+        }
+            
             .image-nav-btn {
                 width: 35px;
                 height: 35px;
@@ -171,8 +184,19 @@
             }
         }
         
+        @media (max-width: 480px) {
+            .product-image {
+                max-width: 100%;
+                height: 250px;
+            }
+            
+            .product-series-image {
+            height: 240px;
+        }
+        }
+        
         .material-types {
-            margin: 60px 0;
+            margin: 0px 0;
         }
         
         .material-types h2 {
@@ -198,6 +222,10 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 30px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 25px;
         }
         
         /* 钛纤维毡系列 - 银灰色主题 */
@@ -207,7 +235,7 @@
             border-radius: 20px;
             padding: 30px;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -234,7 +262,7 @@
             border-radius: 20px;
             padding: 30px;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             box-shadow: 0 10px 30px rgba(76, 175, 80, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -261,7 +289,7 @@
             border-radius: 20px;
             padding: 30px;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -288,7 +316,7 @@
             border-radius: 20px;
             padding: 30px;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             box-shadow: 0 10px 30px rgba(156, 39, 176, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -311,6 +339,7 @@
         .material-card-header {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
         }
         
@@ -354,6 +383,7 @@
             font-size: 0.95rem;
             line-height: 1.6;
             color: #555;
+            text-align: left;
         }
         
         .material-card .key-features {
@@ -421,6 +451,11 @@
             .material-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 25px;
+                padding: 0 20px;
+            }
+            
+            .product-image {
+                height: 180px;
             }
         }
         
@@ -428,6 +463,7 @@
             .material-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                padding: 0 15px;
             }
             
             .material-card {
@@ -443,6 +479,20 @@
             
             .material-card h3 {
                 font-size: 1.2rem;
+            }
+            
+            .product-image {
+                height: 160px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .material-grid {
+                padding: 0 10px;
+            }
+            
+            .product-image {
+                height: 140px;
             }
         }
     </style>
@@ -507,94 +557,11 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4S2R7G7"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- 顶部通栏 -->
-    <header class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>sales03@echemstore.cn</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+86-15680598517</span>
-                    </div>
-                    <div class="contact-item">
-                        <a href="https://www.linkedin.com/in/qiu-tian-a8b90a365/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="logo">
-                    <h1>eChemStore<sup>®</sup></h1>
-                    <span class="tagline">电化学商城</span>
-                </div>
-                
-                <div class="language-switch">
-                    <a href="product-porous-diffusion-layer-en.html" class="lang-btn">English</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- 顶部通栏将通过JavaScript动态加载 -->
+    <div id="top-bar-placeholder"></div>
 
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html">首页</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="dropdown-toggle">电化学核心材料 <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="product-anion-membrane.html">阴离子交换膜</a></li>
-                            <li><a href="product-zsm-membrane.html">复合隔膜</a></li>
-                            <li><a href="product-pps-membrane.html">PPS隔膜</a></li>
-                            <li><a href="product-carbon-paper.html">亲水/改性碳纸</a></li>
-                            <li><a href="product-electrolytic-cell.html">电解池</a></li>
-                            <li><a href="product-porous-diffusion-layer.html">多孔扩散层</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="dropdown-toggle">电化学测试系统 <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="product-desktop-system.html">桌面式电解水制氢系统</a></li>
-                            <li><a href="product-bench-hydrogen-system.html">台架式电解水制氢系统</a></li>
-                            <li><a href="product-multichannel-hydrogen-system.html">多通道电解水制氢系统</a></li>
-                            <li><a href="product-co2-electrolysis-system.html">电解二氧化碳系统</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="dropdown-toggle">电化学常用设备 <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="product-homogenizer.html">微射流纳米均质机</a></li>
-                            <li><a href="product-joule-heating.html">焦耳加热装置</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="dropdown-toggle">技术咨询服务与数据库 <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="service-lca.html">生命周期评估(LCA)</a></li>
-                            <li><a href="service-tea.html">技术经济性评估(TEA)</a></li>
-                            <li><a href="service-database.html">Hydrergy数据库</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html">联系我们</a>
-                    </li>
-                </ul>
-                <div class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- 主导航将通过JavaScript动态加载 -->
+    <div id="main-nav-placeholder"></div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -642,7 +609,6 @@
                 <!-- Material Types -->
                 <div class="material-types">
                     <h2>产品系列</h2>
-                    <p class="section-subtitle">四大系列多孔扩散层材料，满足不同电化学应用需求，提供卓越性能与高度定制化服务</p>
                     <div class="material-grid">
                         <div class="material-card titanium">
                             <div class="material-card-header">
@@ -652,24 +618,12 @@
                                 <h3>钛纤维毡系列</h3>
                             </div>
                             <div class="series-overview">
-                                <p>Hydrergy钛纤维毡采用微米级钛纤维先进烧结工艺，3D网状结构与梯度孔隙设计，在恶劣环境下展现卓越电解效率与超强耐久性。</p>
-                            </div>
-                            <div class="key-features">
-                                <h4>核心优势</h4>
-                                <div class="feature-tags">
-                                    <span class="feature-tag">极低电阻 &lt;0.5mΩ·cm²</span>
-                                    <span class="feature-tag">节能15-20%</span>
-                                    <span class="feature-tag">耐温600°C</span>
-                                    <span class="feature-tag">pH 1-14稳定</span>
-                                    <span class="feature-tag">激光切割定制</span>
-                                </div>
+                                <p>echemstore钛纤维毡采用微米级钛纤维先进烧结工艺，3D网状结构与梯度孔隙设计，在恶劣环境下展现卓越电解效率与超强耐久性。</p>
                             </div>
                             <div class="product-specs">
                                 <strong>产品规格：</strong>厚度0.2-2.0mm | 孔隙率60-85% | 尺寸可定制至1000×2000mm
                             </div>
-                            <div class="applications">
-                                <strong>应用场景：</strong>PEM/AEM水电解、燃料电池气体扩散层、化工酸碱过滤
-                            </div>
+                            <img src="images/多孔扩散层.png" alt="钛纤维毡系列多孔扩散层产品图" class="product-series-image" style="margin-top: 20px;">
                         </div>
                         
                         <div class="material-card nickel-felt">
@@ -682,22 +636,10 @@
                             <div class="series-overview">
                                 <p>高纯度镍纤维（Ni≥99.5%）烧结制成的3D多孔材料，专为高性能电化学应用设计，在恶劣环境下展现无可比拟的耐腐蚀性与耐久性。</p>
                             </div>
-                            <div class="key-features">
-                                <h4>核心特性</h4>
-                                <div class="feature-tags">
-                                    <span class="feature-tag">孔隙率50-85%</span>
-                                    <span class="feature-tag">3D互通结构</span>
-                                    <span class="feature-tag">耐温500°C</span>
-                                    <span class="feature-tag">钝化抗腐蚀</span>
-                                    <span class="feature-tag">大尺寸定制</span>
-                                </div>
-                            </div>
                             <div class="product-specs">
                                 <strong>产品规格：</strong>厚度0.3-3.0mm | 孔隙率50-85% | 纤维直径8-50μm | 尺寸可定制至1500×3000mm
                             </div>
-                            <div class="applications">
-                                <strong>应用场景：</strong>AEM/PEM电解槽扩散层、PEMFC/SOFC气体扩散介质、催化剂载体、航空航天高温过滤
-                            </div>
+                            <img src="images/多孔扩散层4.png" alt="镍纤维毡系列多孔扩散层产品图" class="product-series-image" style="margin-top: 20px;">
                         </div>
                         
                         <div class="material-card nickel-mesh">
@@ -710,22 +652,10 @@
                             <div class="series-overview">
                                 <p>优质N4（99.9% Ni）和N6（99.6% Ni）合金制成，具备卓越的耐腐蚀性、热稳定性与导电性，适用于高要求的工业应用场景。</p>
                             </div>
-                            <div class="key-features">
-                                <h4>核心特性</h4>
-                                <div class="feature-tags">
-                                    <span class="feature-tag">超强耐腐蚀</span>
-                                    <span class="feature-tag">高导电性</span>
-                                    <span class="feature-tag">耐温800°C</span>
-                                    <span class="feature-tag">平纹/斜纹编织</span>
-                                    <span class="feature-tag">目数1-330可选</span>
-                                </div>
-                            </div>
                             <div class="product-specs">
                                 <strong>产品规格：</strong>目数1-330mesh | 丝径0.025-2.0mm | 厚度0.1-5.0mm | 尺寸可定制至2000×6000mm
                             </div>
-                            <div class="applications">
-                                <strong>应用场景：</strong>电解系统阳极/阴极网、NiMH/Li-ion电池集流体、化工过滤与催化剂回收、航空航天高温过滤
-                            </div>
+                            <img src="images/多孔扩散层6.png" alt="高性能镍丝网系列多孔扩散层产品图" class="product-series-image" style="margin-top: 20px;">
                         </div>
                         
                         <div class="material-card foam-nickel">
@@ -738,22 +668,10 @@
                             <div class="series-overview">
                                 <p>通过电沉积、高温氧化、氢气还原等先进工艺制造，凭借独特的结构与功能特性，在电解、电池电极、催化应用中表现突出。</p>
                             </div>
-                            <div class="key-features">
-                                <h4>核心优势</h4>
-                                <div class="feature-tags">
-                                    <span class="feature-tag">卓越导电性</span>
-                                    <span class="feature-tag">孔隙率35-110 PPI</span>
-                                    <span class="feature-tag">强耐久性</span>
-                                    <span class="feature-tag">厚度1.3-6.0mm</span>
-                                    <span class="feature-tag">卷材/板材可选</span>
-                                </div>
-                            </div>
                             <div class="product-specs">
                                 <strong>产品规格：</strong>厚度1.3-6.0mm | 孔隙率35-110 PPI | 孔隙率85-98% | 尺寸可定制至1200×2400mm
                             </div>
-                            <div class="applications">
-                                <strong>应用场景：</strong>高效制氢/制氧电解、镍氢电池电极、催化剂载体、过滤散热及声学阻尼
-                            </div>
+                            <img src="images/多孔扩散层7.png" alt="高性能泡沫镍系列多孔扩散层产品图" class="product-series-image" style="margin-top: 20px;">
 
                         </div>
                     </div>
@@ -761,41 +679,16 @@
 
 
 
-                <!-- Contact Section -->
-                <div class="product-contact">
-                    <h2>联系咨询</h2>
-                    <p>如需了解更多产品信息、技术参数或定制服务，请联系我们的专业团队。</p>
-                    <div class="contact-buttons">
-                        <a href="contact.html" class="btn btn-primary">留言咨询</a>
-                        <a href="contact.html" class="btn btn-secondary">联系我们</a>
-                    </div>
-                </div>
+                <!-- 联系咨询栏目将通过JavaScript动态加载 -->
+                <div id="contact-section-placeholder"></div>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <!-- 底部 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-divider"></div>
-            <div class="footer-content">
-                <p class="company-motto">
-                    eChemStore作为能源与物质转换领域材料和设备的专业服务者，实时报道领域内科学最前沿动态，关注和分享新材料、新工艺、新技术、新设备等一线科技创新设计、解决方案。
-                </p>
-                <p class="copyright">
-                    © 2024 echemstore. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
+    <!-- 底部通栏将通过JavaScript动态加载 -->
+    <div id="footer-placeholder"></div>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
-        <span>↑</span>
-    </button>
-
-    <script src="js/main.js"></script>
+    <script src="js/common-modules.js"></script>
     <script>
         // 图片轮播功能
         document.addEventListener('DOMContentLoaded', function() {
