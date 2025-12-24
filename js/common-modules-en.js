@@ -114,6 +114,7 @@ class EnglishCommonModulesLoader {
                 'product-bench-hydrogen-system-en.html': 'product-bench-hydrogen-system.html',
                 'product-multichannel-hydrogen-system-en.html': 'product-multichannel-hydrogen-system.html',
                 'product-co2-electrolysis-system-en.html': 'product-co2-electrolysis-system.html',
+                'product-co2-capture-conversion-en.html': 'product-co2-capture-conversion.html',
                 'product-homogenizer-en.html': 'product-homogenizer.html',
                 'product-joule-heating-en.html': 'product-joule-heating.html',
                 'product-pem-test-system-en.html': 'product-pem-test-system.html',
@@ -126,7 +127,8 @@ class EnglishCommonModulesLoader {
                 'electrochemical-materials-en.html': 'electrochemical-materials.html',
                 'electrochemical-testing-systems-en.html': 'electrochemical-testing-systems.html',
                 'electrochemical-equipment-en.html': 'electrochemical-equipment.html',
-                'technical-consulting-services-en.html': 'technical-consulting-services.html'
+                'technical-consulting-services-en.html': 'technical-consulting-services.html',
+                'product-economical-testing-platform-en.html': 'product-economical-testing-platform.html'
             };
             
             const chinesePage = pageMapping[currentPage];

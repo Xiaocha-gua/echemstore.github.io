@@ -64,6 +64,8 @@ class CommonModules {
             
             // 中文页面到英文页面的映射
             const pageMapping = {
+                '': 'index-en.html',
+                'index': 'index-en.html',
                 'product-anion-membrane.html': 'product-anion-membrane-en.html',
                 'product-zsm-membrane.html': 'product-zsm-membrane-en.html',
                 'product-pps-membrane.html': 'product-pps-membrane-en.html',
@@ -74,6 +76,7 @@ class CommonModules {
                 'product-bench-hydrogen-system.html': 'product-bench-hydrogen-system-en.html',
                 'product-multichannel-hydrogen-system.html': 'product-multichannel-hydrogen-system-en.html',
                 'product-co2-electrolysis-system.html': 'product-co2-electrolysis-system-en.html',
+                'product-co2-capture-conversion.html': 'product-co2-capture-conversion-en.html',
                 'product-homogenizer.html': 'product-homogenizer-en.html',
                 'product-joule-heating.html': 'product-joule-heating-en.html',
                 'product-pem-test-system.html': 'product-pem-test-system-en.html',
@@ -86,7 +89,8 @@ class CommonModules {
                 'electrochemical-materials.html': 'electrochemical-materials-en.html',
                 'electrochemical-testing-systems.html': 'electrochemical-testing-systems-en.html',
                 'electrochemical-equipment.html': 'electrochemical-equipment-en.html',
-                'technical-consulting-services.html': 'technical-consulting-services-en.html'
+                'technical-consulting-services.html': 'technical-consulting-services-en.html',
+                'product-economical-testing-platform.html': 'product-economical-testing-platform-en.html'
             };
             
             const englishPage = pageMapping[currentPage];

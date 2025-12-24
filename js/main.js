@@ -486,8 +486,8 @@ window.addEventListener('load', function() {
 
 // 产品滑动功能
 let sliderStates = {
-    components: { currentIndex: 0, totalItems: 7 },
-    systems: { currentIndex: 0, totalItems: 6 },
+    components: { currentIndex: 0, totalItems: 8 },
+    systems: { currentIndex: 0, totalItems: 5 },
     equipment: { currentIndex: 0, totalItems: 2 },
     consulting: { currentIndex: 0, totalItems: 3 }
 };
@@ -496,6 +496,15 @@ let sliderStates = {
 function initProductSliders() {
     // 为每个滑动器设置初始状态
     Object.keys(sliderStates).forEach(sliderId => {
+        // 动态计算产品数量
+        const slider = document.querySelector(`[data-slider="${sliderId}"]`);
+        if (slider) {
+            const container = slider.querySelector('.products-container');
+            if (container) {
+                const items = container.querySelectorAll('.product-item');
+                sliderStates[sliderId].totalItems = items.length;
+            }
+        }
         updateSliderButtons(sliderId);
     });
     

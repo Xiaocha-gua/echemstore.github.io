@@ -1275,9 +1275,12 @@ body {
 
 .components-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     margin-top: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .component-card {
@@ -8037,44 +8040,368 @@ p {
     }
 }
 
-/* 热销产品版块样式 - 全新设计 */
+/* 热销产品版块样式 - 深色高端商务主题 - 增强动态效果版 */
 .hot-products-section {
     padding: 100px 0;
-    background: #ffffff;
-    color: #333333;
+    
+    /* 超级增强的深色高端渐变背景 - 三层渐变 */
+    background: 
+        linear-gradient(135deg, #1a365d 0%, #2d3748 25%, #4a5568 50%, #2d3748 75%, #1a365d 100%),
+        linear-gradient(45deg, rgba(59, 130, 246, 0.15) 0%, transparent 50%, rgba(139, 92, 246, 0.15) 100%),
+        linear-gradient(-45deg, rgba(124, 58, 237, 0.08) 0%, transparent 30%, rgba(67, 56, 202, 0.12) 70%, transparent 100%);
+    background-size: 250% 250%, 180% 180%, 300% 300%;
+    background-position: 0% 0%, 100% 0%, 50% 50%;
+    
+    /* 超级增强的流动动画 - 18秒循环 */
+    animation: superEnhancedPremiumFlow 18s ease-in-out infinite;
+    
+    color: #ffffff;
     position: relative;
     overflow: hidden;
+    
+    /* 增强的box-shadow层次感 */
+    box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.25), 0 0 50px rgba(59, 130, 246, 0.1);
 }
 
+/* 超级增强的银白色光晕装饰 - 多方向流动光线效果 */
+.hot-products-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        /* 主光晕 - 增强亮度 */
+        radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.18) 0%, rgba(203, 213, 225, 0.12) 30%, transparent 60%),
+        radial-gradient(ellipse at 30% 70%, rgba(139, 92, 246, 0.08) 0%, rgba(59, 130, 246, 0.06) 40%, transparent 70%),
+        /* 多方向流动光线 - 增强亮度和复杂度 */
+        linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.08) 50%, transparent 75%),
+        linear-gradient(-45deg, transparent 30%, rgba(203, 213, 225, 0.06) 50%, transparent 70%),
+        linear-gradient(135deg, transparent 35%, rgba(124, 58, 237, 0.04) 50%, transparent 65%),
+        linear-gradient(-135deg, transparent 40%, rgba(67, 56, 202, 0.05) 50%, transparent 60%);
+    background-size: 80% 80%, 90% 90%, 280% 280%, 220% 220%, 350% 350%, 300% 300%;
+    animation: superEnhancedSilverGlow 16s ease-in-out infinite, superLightSweep 10s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 超级增强的精致光点效果 - 15个动态粒子带旋转 */
 .hot-products-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
-    animation: backgroundShift 20s ease-in-out infinite;
-}
-
-@keyframes backgroundShift {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
-}
-
-.hot-products-section .container {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        /* 第一层粒子 - 大粒子 */
+        radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.1) 1.8px, transparent 1.8px),
+        radial-gradient(circle at 85% 15%, rgba(203, 213, 225, 0.08) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 45% 75%, rgba(255, 255, 255, 0.09) 2px, transparent 2px),
+        radial-gradient(circle at 75% 85%, rgba(148, 163, 184, 0.07) 1.6px, transparent 1.6px),
+        radial-gradient(circle at 25% 65%, rgba(255, 255, 255, 0.08) 1.7px, transparent 1.7px),
+        /* 第二层粒子 - 中等粒子 */
+        radial-gradient(circle at 60% 40%, rgba(139, 92, 246, 0.06) 1.2px, transparent 1.2px),
+        radial-gradient(circle at 30% 80%, rgba(203, 213, 225, 0.07) 1.4px, transparent 1.4px),
+        radial-gradient(circle at 90% 60%, rgba(148, 163, 184, 0.05) 1.1px, transparent 1.1px),
+        radial-gradient(circle at 10% 45%, rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 65% 20%, rgba(124, 58, 237, 0.05) 1.3px, transparent 1.3px),
+        /* 第三层粒子 - 小粒子 */
+        radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.04) 0.9px, transparent 0.9px),
+        radial-gradient(circle at 80% 45%, rgba(67, 56, 202, 0.04) 0.8px, transparent 0.8px),
+        radial-gradient(circle at 20% 90%, rgba(203, 213, 225, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 55% 85%, rgba(255, 255, 255, 0.03) 0.7px, transparent 0.7px),
+        radial-gradient(circle at 95% 25%, rgba(148, 163, 184, 0.04) 0.9px, transparent 0.9px);
+    background-size: 
+        320px 320px, 280px 280px, 420px 420px, 380px 380px, 300px 300px,
+        240px 240px, 350px 350px, 200px 200px, 290px 290px, 260px 260px,
+        180px 180px, 220px 220px, 340px 340px, 160px 160px, 190px 190px;
+    animation: superEnhancedElegantFloat 22s linear infinite;
+    pointer-events: none;
     z-index: 2;
-    max-width: 1800px; /* 扩大容器宽度以适应400px图片 */
 }
+
+/* 容器脉冲光晕动画 */
+@keyframes containerPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.02);
+    }
+}
+
+/* 超级增强的优雅流动动画 - 更大变化幅度和强滤镜效果 */
+@keyframes superEnhancedPremiumFlow {
+    0%, 100% {
+        background-position: 0% 0%, 100% 0%, 50% 50%;
+        background-size: 250% 250%, 180% 180%, 300% 300%;
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+    20% {
+        background-position: 80% 20%, 20% 80%, 80% 20%;
+        background-size: 400% 400%, 300% 300%, 200% 200%;
+        filter: brightness(1.15) contrast(1.1) saturate(1.05);
+    }
+    40% {
+        background-position: 100% 100%, 0% 100%, 100% 0%;
+        background-size: 200% 200%, 250% 250%, 350% 350%;
+        filter: brightness(0.9) contrast(1.15) saturate(0.95);
+    }
+    60% {
+        background-position: 20% 80%, 80% 20%, 0% 100%;
+        background-size: 350% 350%, 200% 200%, 280% 280%;
+        filter: brightness(1.1) contrast(0.9) saturate(1.1);
+    }
+    80% {
+        background-position: 0% 100%, 100% 0%, 50% 0%;
+        background-size: 300% 300%, 280% 280%, 320% 320%;
+        filter: brightness(1.05) contrast(1.05) saturate(0.9);
+    }
+}
+
+/* 超级增强的银色光晕动画 - 更复杂的变化和滤镜效果 */
+@keyframes superEnhancedSilverGlow {
+    0% { 
+        opacity: 0.5; 
+        transform: scale(1) rotate(0deg) translateX(0px) translateY(0px);
+        filter: brightness(1) blur(0px) hue-rotate(0deg);
+    }
+    20% {
+        opacity: 0.25;
+        transform: scale(1.3) rotate(72deg) translateX(25px) translateY(-15px);
+        filter: brightness(1.2) blur(1px) hue-rotate(30deg);
+    }
+    40% {
+        opacity: 0.18;
+        transform: scale(1.15) rotate(144deg) translateX(-12px) translateY(20px);
+        filter: brightness(0.9) blur(0.5px) hue-rotate(60deg);
+    }
+    60% {
+        opacity: 0.35;
+        transform: scale(0.85) rotate(216deg) translateX(18px) translateY(-8px);
+        filter: brightness(1.1) blur(1.5px) hue-rotate(90deg);
+    }
+    80% {
+        opacity: 0.28;
+        transform: scale(1.1) rotate(288deg) translateX(-20px) translateY(12px);
+        filter: brightness(1.05) blur(0.8px) hue-rotate(120deg);
+    }
+    100% { 
+        opacity: 0.4; 
+        transform: scale(1.05) rotate(360deg) translateX(0px) translateY(0px);
+        filter: brightness(1) blur(0px) hue-rotate(0deg);
+    }
+}
+
+/* 超级流动光线扫描动画 - 多方向复杂扫描 */
+@keyframes superLightSweep {
+    0% {
+        background-position: -120% -50%, -120% 50%, -150% 0%, -150% 100%;
+    }
+    25% {
+        background-position: 0% 0%, 0% 100%, 50% 50%, 50% -50%;
+    }
+    50% {
+        background-position: 120% 50%, 120% -50%, 150% 100%, 150% 0%;
+    }
+    75% {
+        background-position: 200% 100%, 200% 0%, 250% 50%, 250% 150%;
+    }
+    100% {
+        background-position: 300% 150%, 300% -100%, 350% 200%, 350% -50%;
+    }
+}
+
+/* 超级增强的精致光点浮动动画 - 带旋转和复杂运动 */
+@keyframes superEnhancedElegantFloat {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+        opacity: 1;
+        filter: brightness(1) hue-rotate(0deg);
+    }
+    15% {
+        transform: translateY(-18px) translateX(8px) scale(1.15) rotate(54deg);
+        opacity: 0.85;
+        filter: brightness(1.1) hue-rotate(20deg);
+    }
+    30% {
+        transform: translateY(-8px) translateX(-12px) scale(0.85) rotate(108deg);
+        opacity: 0.65;
+        filter: brightness(0.9) hue-rotate(40deg);
+    }
+    45% {
+        transform: translateY(-22px) translateX(5px) scale(1.08) rotate(162deg);
+        opacity: 0.95;
+        filter: brightness(1.05) hue-rotate(60deg);
+    }
+    60% {
+        transform: translateY(-5px) translateX(15px) scale(0.92) rotate(216deg);
+        opacity: 0.75;
+        filter: brightness(1.15) hue-rotate(80deg);
+    }
+    75% {
+        transform: translateY(-16px) translateX(-6px) scale(1.12) rotate(270deg);
+        opacity: 0.88;
+        filter: brightness(0.95) hue-rotate(100deg);
+    }
+    90% {
+        transform: translateY(-10px) translateX(12px) scale(0.98) rotate(324deg);
+        opacity: 0.8;
+        filter: brightness(1.08) hue-rotate(120deg);
+    }
+}
+
+/* 原有动画保留 */
+@keyframes premiumFlow {
+    0%, 100% {
+        background-position: 0% 0%;
+        background-size: 200% 200%;
+    }
+    25% {
+        background-position: 100% 0%;
+        background-size: 220% 220%;
+    }
+    50% {
+        background-position: 100% 100%;
+        background-size: 180% 180%;
+    }
+    75% {
+        background-position: 0% 100%;
+        background-size: 210% 210%;
+    }
+}
+
+/* 银色光晕脉冲动画 */
+@keyframes silverGlow {
+    0% { 
+        opacity: 0.3; 
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 0.15;
+        transform: scale(1.1) rotate(180deg);
+    }
+    100% { 
+        opacity: 0.25; 
+        transform: scale(1.05) rotate(360deg);
+    }
+}
+
+/* 超级增强容器脉冲动画 */
+@keyframes superContainerPulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+        filter: brightness(1) blur(0px);
+    }
+    25% {
+        opacity: 0.35;
+        transform: scale(1.08);
+        filter: brightness(1.15) blur(0.5px);
+    }
+    50% {
+        opacity: 0.25;
+        transform: scale(1.15);
+        filter: brightness(0.9) blur(1px);
+    }
+    75% {
+        opacity: 0.45;
+        transform: scale(1.05);
+        filter: brightness(1.1) blur(0.3px);
+    }
+}
+
+/* 能量波纹扩散动画 */
+@keyframes energyRipple {
+    0% {
+        width: 100px;
+        height: 100px;
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    25% {
+        width: 300px;
+        height: 300px;
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    50% {
+        width: 600px;
+        height: 600px;
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    75% {
+        width: 900px;
+        height: 900px;
+        opacity: 0.2;
+        transform: translate(-50%, -50%) scale(1.8);
+    }
+    100% {
+        width: 1200px;
+        height: 1200px;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
 
 /* 标题区域 */
 .hot-products-header {
     text-align: center;
     margin-bottom: 60px;
+}
+
+.hot-products-section .container {
+    position: relative;
+    z-index: 4;
+    max-width: 1800px; /* 扩大容器宽度以适应400px图片 */
+    
+    /* 增强脉冲光晕效果 */
+    &::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        background: 
+            radial-gradient(ellipse at center, 
+                rgba(255, 255, 255, 0.05) 0%, 
+                rgba(203, 213, 225, 0.03) 30%, 
+                transparent 70%
+            );
+        border-radius: 20px;
+        animation: superContainerPulse 7s ease-in-out infinite;
+        pointer-events: none;
+        z-index: -1;
+    }
+    
+    /* 添加波纹扩散效果 */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        background: 
+            radial-gradient(circle, 
+                rgba(139, 92, 246, 0.08) 0%, 
+                rgba(59, 130, 246, 0.06) 30%, 
+                rgba(124, 58, 237, 0.04) 60%, 
+                transparent 100%
+            );
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: energyRipple 12s ease-out infinite;
+        pointer-events: none;
+        z-index: -1;
+    }
 }
 
 .hot-products-title {
@@ -8085,42 +8412,78 @@ p {
     display: block;
     font-size: 24px;
     font-weight: 300;
-    color: #ffd700;
+    color: #cbd5e1; /* 浅灰蓝色，适应深色背景 */
     margin-bottom: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    /* 标题淡入动画 */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: titleFadeIn 0.8s ease-out 0.2s forwards;
+    /* 添加文字阴影增强可读性 */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 标题淡入动画 */
+@keyframes titleFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hot-products-title h2 {
     font-size: 48px;
     font-weight: 700;
     margin: 0;
-    color: #333333;
-    text-shadow: none;
+    color: #ffffff; /* 白色文字适应深色背景 */
+    /* 添加文字阴影增强可读性 */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.5);
+    /* 主标题淡入动画 */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: titleFadeIn 0.8s ease-out 0.4s forwards;
 }
 
 .title-underline {
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #ffd700, #ffed4e);
+    background: linear-gradient(90deg, #e2e8f0, #94a3b8); /* 浅灰到中灰渐变，适应深色主题 */
     margin: 20px auto;
     border-radius: 2px;
-    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+    /* 装饰线渐进绘制动画 */
+    width: 0;
+    animation: underlineDraw 1.2s ease-out 0.8s forwards;
+    /* 添加微妙的银色光晕 */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+/* 装饰线绘制动画 */
+@keyframes underlineDraw {
+    to {
+        width: 80px;
+    }
 }
 
 .hot-products-description p {
     font-size: 18px;
     margin: 0 0 10px 0;
-    opacity: 0.9;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: #e2e8f0; /* 浅灰色文字适应深色背景 */
+    /* 添加文字阴影增强可读性 */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-weight: 500; /* 增加字重提升可读性 */
 }
 
 .hot-products-description .subtitle {
     font-size: 16px;
-    opacity: 0.7;
     font-style: italic;
+    color: #cbd5e1; /* 中等灰色适应深色背景 */
+    /* 添加文字阴影增强可读性 */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    font-weight: 400;
 }
 
 /* 产品展示区域 */
@@ -8134,18 +8497,60 @@ p {
 }
 
 .hot-product-card {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border: 1px solid rgba(59, 130, 246, 0.1);
     border-radius: 16px;
     padding: 24px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     width: 100%; /* 确保卡片占满网格单元 */
     max-width: 400px; /* 设置最大宽度以适应400px图片 */
+    
+    /* 初始状态 - 为滚动进入动画准备 */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardFadeInUp 0.6s ease-out forwards;
 }
 
+/* 产品卡片滚动进入动画 */
+@keyframes cardFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 为不同卡片添加延迟，创造波浪效果 */
+.hot-product-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.hot-product-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.hot-product-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.hot-product-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.hot-product-card:hover {
+    transform: translateY(-8px) rotateX(2deg) rotateY(1deg);
+    background: #ffffff;
+    box-shadow: 
+        0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+        0 10px 10px -5px rgba(0, 0, 0, 0.04),
+        0 0 0 1px rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.3);
+    position: relative;
+}
+
+/* 微光扫过效果 */
 .hot-product-card::before {
     content: '';
     position: absolute;
@@ -8153,19 +8558,18 @@ p {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-    transition: left 0.5s ease;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(59, 130, 246, 0.1),
+        transparent
+    );
+    transition: left 0.6s ease;
+    z-index: 1;
 }
 
 .hot-product-card:hover::before {
     left: 100%;
-}
-
-.hot-product-card:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    border-color: rgba(255, 215, 0, 0.3);
 }
 
 .card-badge {
@@ -8341,6 +8745,25 @@ p {
 @media (max-width: 768px) {
     .hot-products-section {
         padding: 80px 0;
+        /* 保持现代蓝紫色渐变背景 */
+        background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 25%, #7c3aed 50%, #a855f7 75%, #c084fc 100%);
+        
+        /* 简化分子结构图案以适应小屏幕 */
+        background-image: 
+            /* 分子节点 */
+            radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px),
+            radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 2px, transparent 2px),
+            radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px),
+            radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+            /* 连接线 */
+            linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.05) 49%, rgba(255, 255, 255, 0.05) 51%, transparent 52%);
+        
+        background-size: 
+            120px 120px, 150px 110px, 110px 130px, 130px 120px,
+            60px 60px;
+        background-position: 
+            0 0, 60px 30px, 30px 60px, 90px 70px,
+            0 0;
     }
     
     .hot-products-title h2 {
@@ -8373,25 +8796,44 @@ p {
         top: 4px;
         right: 4px;
     }
-    
-    .card-badge.discount::before {
-        top: -6px;
-        left: -6px;
-        right: -6px;
-        bottom: -6px;
-    }
-    
-    .card-badge.discount::after {
-        top: -3px;
-        left: -3px;
-        right: -3px;
-        bottom: -3px;
-    }
 }
 
 @media (max-width: 480px) {
     .hot-products-section {
         padding: 60px 0;
+        /* 保持现代蓝紫色渐变背景 */
+        background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 25%, #7c3aed 50%, #a855f7 75%, #c084fc 100%);
+        
+        /* 进一步简化分子结构图案以适应超小屏幕 */
+        background-image: 
+            /* 分子节点 */
+            radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+            radial-gradient(circle at 75% 35%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px),
+            radial-gradient(circle at 35% 75%, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+        
+        background-size: 
+            80px 80px, 100px 75px, 75px 90px;
+        background-position: 
+            0 0, 40px 20px, 20px 40px;
+    }
+    
+    /* 移动设备性能优化 - 简化动画 */
+    .hot-products-section::after {
+        animation-duration: 40s; /* 减慢动画速度 */
+        background-size: 150px 75px; /* 减少微粒密度 */
+    }
+    
+    .hot-product-card {
+        /* 简化移动设备上的3D效果 */
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .hot-product-card:hover {
+        transform: translateY(-4px); /* 简化为2D变换 */
+    }
+    
+    .hot-product-card::before {
+        display: none; /* 移动设备上禁用微光效果 */
     }
     
     .hot-products-title h2 {
@@ -8426,20 +8868,6 @@ p {
         top: 3px;
         right: 3px;
     }
-    
-    .card-badge.discount::before {
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
-    }
-    
-    .card-badge.discount::after {
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-    }
 }
     
     .product-stats {
@@ -8451,3 +8879,227 @@ p {
         height: 140px;
     }
 }
+
+/* Fancy Technical Parameters Section */
+.technical-parameters {
+    position: relative;
+    padding: 60px 40px;
+    background: radial-gradient(circle at 10% 20%, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 90%);
+    border-radius: 30px;
+    margin: 60px 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.03);
+}
+
+/* Decorative background elements */
+.technical-parameters::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    filter: blur(80px);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.technical-parameters::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #00bcd4, #2196f3);
+    filter: blur(60px);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.tech-params-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.tech-param-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    padding: 35px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-param-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.tech-param-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.15);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.tech-param-card:hover::after {
+    transform: scaleX(1);
+}
+
+.tech-param-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tech-param-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    transform: rotate(-5deg);
+    transition: all 0.4s ease;
+}
+
+/* Custom icon colors for each card */
+.tech-param-card:nth-child(2) .tech-param-icon {
+    background: linear-gradient(135deg, #00bcd4, #2196f3);
+    box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
+}
+
+.tech-param-card:nth-child(3) .tech-param-icon {
+    background: linear-gradient(135deg, #ff9800, #f44336);
+    box-shadow: 0 10px 20px rgba(244, 67, 54, 0.3);
+}
+
+.tech-param-card:hover .tech-param-icon {
+    transform: rotate(0deg) scale(1.1);
+    border-radius: 50%;
+}
+
+.tech-param-header h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #2c3e50;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #2c3e50, #4a5568);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tech-param-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.tech-param-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 5px 20px;
+    position: relative;
+}
+
+.tech-param-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.tech-param-card:hover .tech-param-item::before {
+    background: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Custom bullet colors */
+.tech-param-card:nth-child(2):hover .tech-param-item::before { background: #00bcd4; box-shadow: 0 0 10px rgba(0, 188, 212, 0.5); }
+.tech-param-card:nth-child(3):hover .tech-param-item::before { background: #ff9800; box-shadow: 0 0 10px rgba(255, 152, 0, 0.5); }
+
+.tech-param-label {
+    color: #8898aa;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.tech-param-value {
+    font-weight: 800;
+    font-size: 18px;
+    text-align: right;
+    transition: transform 0.3s ease;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #2c3e50, #4a5568);
+}
+
+.tech-param-item:hover .tech-param-value {
+    transform: translateX(-5px) scale(1.05);
+}
+
+/* Specific value gradients */
+.tech-param-card:nth-child(1) .tech-param-value { background-image: linear-gradient(90deg, #667eea, #764ba2); }
+.tech-param-card:nth-child(2) .tech-param-value { background-image: linear-gradient(90deg, #00bcd4, #2196f3); }
+.tech-param-card:nth-child(3) .tech-param-value { background-image: linear-gradient(90deg, #ff9800, #f44336); }
+
+@media (max-width: 768px) {
+    .technical-parameters {
+        padding: 30px 20px;
+    }
+    
+    .tech-param-card {
+        padding: 25px;
+    }
+    
+    .tech-param-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .tech-param-value {
+        text-align: left;
+        font-size: 18px;
+        transform: none !important;
+    }
+}
+
