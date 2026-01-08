@@ -1,186 +1,142 @@
 /**
  * English Common Modules Loader
  * Dynamically loads and inserts common page modules for English pages
+ * Based on the robust logic from common-modules.js
  */
 
 class EnglishCommonModulesLoader {
     constructor() {
-        this.modulesPath = 'includes/common-modules-en.html';
-        this.modules = {};
-        this.isLoaded = false;
+        this.rootPath = this.determineRootPath();
+        // Hardcoded to English module
+        this.modulesPath = this.rootPath + 'includes/common-modules-en.html';
     }
 
-    /**
-     * Load common modules HTML content
-     */
+    determineRootPath() {
+        // Try to find the script tag that loaded this file
+        const script = document.currentScript || document.querySelector('script[src*="common-modules-en.js"]');
+        if (script) {
+            const src = script.getAttribute('src');
+            // src should be like "../../js/common-modules-en.js" or "js/common-modules-en.js"
+            const match = src.match(/^(.*)js\/common-modules-en\.js/);
+            if (match) {
+                return match[1]; // returns "../../" or ""
+            }
+        }
+        return ''; // Default to root if detection fails
+    }
+
     async loadModules() {
         try {
             const response = await fetch(this.modulesPath);
             if (!response.ok) {
-                throw new Error(`Failed to load modules: ${response.status}`);
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
             const html = await response.text();
-            this.parseModules(html);
-            this.isLoaded = true;
-            
-            console.log('English common modules loaded successfully');
-            return true;
+            return this.parseModules(html);
         } catch (error) {
-            console.error('Error loading English common modules:', error);
-            return false;
+            console.error('Failed to load English common modules:', error);
+            return null;
         }
     }
 
-    /**
-     * Parse HTML content and extract individual modules
-     */
     parseModules(html) {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
         
-        // Extract each module
-        this.modules.topBar = doc.getElementById('top-bar-module');
-        this.modules.mainNav = doc.getElementById('main-nav-module');
-        this.modules.contactSection = doc.getElementById('contact-section-module');
-        this.modules.footer = doc.getElementById('footer-module');
-        
-        console.log('Parsed modules:', Object.keys(this.modules));
-    }
-
-    /**
-     * Insert top bar module
-     */
-    insertTopBar() {
-        const placeholder = document.getElementById('top-bar-placeholder');
-        if (placeholder && this.modules.topBar) {
-            placeholder.replaceWith(this.modules.topBar.cloneNode(true));
-            this.setupLanguageSwitch();
-            console.log('Top bar inserted');
-        }
-    }
-
-    /**
-     * Insert main navigation module
-     */
-    insertMainNav() {
-        const placeholder = document.getElementById('main-nav-placeholder');
-        if (placeholder && this.modules.mainNav) {
-            placeholder.replaceWith(this.modules.mainNav.cloneNode(true));
-            console.log('Main navigation inserted');
-        }
-    }
-
-    /**
-     * Insert contact section module
-     */
-    insertContactSection() {
-        const placeholder = document.getElementById('contact-section-placeholder');
-        if (placeholder && this.modules.contactSection) {
-            placeholder.replaceWith(this.modules.contactSection.cloneNode(true));
-            console.log('Contact section inserted');
-        }
-    }
-
-    /**
-     * Insert footer module
-     */
-    insertFooter() {
-        const placeholder = document.getElementById('footer-placeholder');
-        if (placeholder && this.modules.footer) {
-            placeholder.replaceWith(this.modules.footer.cloneNode(true));
-            console.log('Footer inserted');
-        }
-    }
-
-    /**
-     * Setup language switch functionality
-     */
-    setupLanguageSwitch() {
-        const langSwitchLink = document.getElementById('lang-switch-link');
-        if (langSwitchLink) {
-            // Get current page filename
-            const currentPage = window.location.pathname.split('/').pop();
-            
-            // Map English pages to Chinese pages
-            const pageMapping = {
-                'product-anion-membrane-en.html': 'product-anion-membrane.html',
-                'product-zsm-membrane-en.html': 'product-zsm-membrane.html',
-                'product-pps-membrane-en.html': 'product-pps-membrane.html',
-                'product-carbon-paper-en.html': 'product-carbon-paper.html',
-                'product-electrolytic-cell-en.html': 'product-electrolytic-cell.html',
-                'product-porous-diffusion-layer-en.html': 'product-porous-diffusion-layer.html',
-                'product-desktop-system-en.html': 'product-desktop-system.html',
-                'product-bench-hydrogen-system-en.html': 'product-bench-hydrogen-system.html',
-                'product-multichannel-hydrogen-system-en.html': 'product-multichannel-hydrogen-system.html',
-                'product-co2-electrolysis-system-en.html': 'product-co2-electrolysis-system.html',
-                'product-co2-capture-conversion-en.html': 'product-co2-capture-conversion.html',
-                'product-homogenizer-en.html': 'product-homogenizer.html',
-                'product-joule-heating-en.html': 'product-joule-heating.html',
-                'product-pem-test-system-en.html': 'product-pem-test-system.html',
-                'product-non-metallic-frame-en.html': 'product-non-metallic-frame.html',
-                'service-lca-en.html': 'service-lca.html',
-                'service-tea-en.html': 'service-tea.html',
-                'service-database-en.html': 'service-database.html',
-                'contact-en.html': 'contact.html',
-                'index-en.html': 'index.html',
-                'electrochemical-materials-en.html': 'electrochemical-materials.html',
-                'electrochemical-testing-systems-en.html': 'electrochemical-testing-systems.html',
-                'electrochemical-equipment-en.html': 'electrochemical-equipment.html',
-                'technical-consulting-services-en.html': 'technical-consulting-services.html',
-                'product-economical-testing-platform-en.html': 'product-economical-testing-platform.html'
-            };
-            
-            const chinesePage = pageMapping[currentPage];
-            if (chinesePage) {
-                langSwitchLink.href = chinesePage;
+        // Rewrite all links to be relative to the current page's depth
+        const rewriteAttribute = (el, attr) => {
+            const val = el.getAttribute(attr);
+            if (val && !val.startsWith('http') && !val.startsWith('//') && !val.startsWith('#') && !val.startsWith('mailto:') && !val.startsWith('javascript:')) {
+                // Prepend rootPath. We don't strip './' because browsers handle '../.././' correctly.
+                el.setAttribute(attr, this.rootPath + val);
             }
-        }
+        };
+
+        doc.querySelectorAll('[href]').forEach(el => rewriteAttribute(el, 'href'));
+        doc.querySelectorAll('[src]').forEach(el => rewriteAttribute(el, 'src'));
+        
+        return {
+            header: doc.querySelector('#top-bar-module') || doc.querySelector('header.top-bar'),
+            navigation: doc.querySelector('#main-nav-module') || doc.querySelector('nav.main-nav'),
+            contact: doc.querySelector('#contact-section-module') || doc.querySelector('.product-contact'),
+            footer: doc.querySelector('#footer-module') || doc.querySelector('footer.footer'),
+            scripts: doc.querySelectorAll('script')
+        };
     }
 
-    /**
-     * Execute module scripts
-     */
-    executeModuleScripts() {
-        // Find and execute scripts from the loaded modules
-        const scripts = document.querySelectorAll('#top-bar-module script, #main-nav-module script, #contact-section-module script, #footer-module script');
-        scripts.forEach(script => {
-            if (script.textContent) {
-                try {
-                    eval(script.textContent);
-                } catch (error) {
-                    console.error('Error executing module script:', error);
-                }
+    insertModules(modules) {
+        // Use innerHTML to preserve the placeholder element (safer than replaceWith)
+        const replacements = [
+            { id: 'top-bar-placeholder', content: modules.header?.innerHTML || '' },
+            { id: 'main-nav-placeholder', content: modules.navigation?.innerHTML || '' },
+            { id: 'contact-section-placeholder', content: modules.contact?.innerHTML || '' },
+            { id: 'footer-placeholder', content: modules.footer?.innerHTML || '' }
+        ];
+
+        replacements.forEach(({ id, content }) => {
+            const placeholder = document.getElementById(id);
+            if (placeholder && content) {
+                placeholder.innerHTML = content;
+            } else if (!placeholder) {
+                // Optional: Log warning if placeholder is missing, but don't break
+                // console.warn(`Placeholder #${id} not found`);
             }
         });
+
+        this.setupLanguageSwitch();
     }
 
-    /**
-     * Initialize all modules
-     */
-    async init() {
-        const loaded = await this.loadModules();
-        if (!loaded) {
-            console.error('Failed to load English common modules');
-            return;
-        }
+    setupLanguageSwitch() {
+        const langLinks = document.querySelectorAll('.language-menu a');
+        if (langLinks.length === 0) return;
 
-        // Insert all modules
-        this.insertTopBar();
-        this.insertMainNav();
-        this.insertContactSection();
-        this.insertFooter();
-        
-        // Execute module scripts
-        this.executeModuleScripts();
-        
-        // Setup language switch functionality
-        this.setupLanguageSwitch();
-        
-        // Dispatch custom event to notify modules are loaded
-        document.dispatchEvent(new CustomEvent('englishModulesLoaded'));
-        
-        console.log('All English common modules initialized successfully');
+        langLinks.forEach(link => {
+            const text = link.textContent.trim();
+            let targetFile = 'index.html'; // Default to Chinese
+            
+            if (text.includes('English')) targetFile = 'en.html';
+            else if (text.includes('Russian') || text.includes('Русский')) targetFile = 'ru.html';
+            else if (text.includes('French') || text.includes('Français')) targetFile = 'fr.html';
+            else if (text.includes('German') || text.includes('Deutsch')) targetFile = 'de.html';
+            else if (text.includes('Portuguese') || text.includes('Português')) targetFile = 'pt.html';
+            else if (text.includes('Spanish') || text.includes('Español')) targetFile = 'es.html';
+            else if (text.includes('Hindi') || text.includes('हिन्दी')) targetFile = 'hi.html';
+            else if (text.includes('Arabic') || text.includes('العربية')) targetFile = 'ar.html';
+            else if (text.includes('Japanese') || text.includes('日本語')) targetFile = 'ja.html';
+            else if (text.includes('Korean') || text.includes('한국어')) targetFile = 'ko.html';
+            else if (text.includes('Chinese') || text.includes('中文')) targetFile = 'index.html';
+            
+            link.href = targetFile;
+        });
+
+         // Handle main button behavior
+         const langSwitchBtn = document.getElementById('lang-switch-link');
+         if (langSwitchBtn) {
+             langSwitchBtn.href = '#';
+         }
+    }
+
+    executeModuleScripts(modules) {
+        if (modules.scripts) {
+            modules.scripts.forEach(script => {
+                const scriptContent = script.textContent;
+                if (scriptContent.trim()) {
+                    const scriptElement = document.createElement('script');
+                    scriptElement.textContent = scriptContent;
+                    document.head.appendChild(scriptElement);
+                }
+            });
+        }
+    }
+
+    async init() {
+        const modules = await this.loadModules();
+        if (modules) {
+            this.insertModules(modules);
+            this.executeModuleScripts(modules);
+            document.dispatchEvent(new CustomEvent('englishModulesLoaded'));
+            console.log('English common modules initialized successfully');
+        }
     }
 }
 
@@ -189,6 +145,3 @@ document.addEventListener('DOMContentLoaded', function() {
     const loader = new EnglishCommonModulesLoader();
     loader.init();
 });
-
-// Export for potential external use
-window.EnglishCommonModulesLoader = EnglishCommonModulesLoader;

@@ -1,7 +1,41 @@
 // 公共模块加载器
 class CommonModules {
     constructor() {
-        this.modulesPath = 'includes/common-modules.html';
+        this.rootPath = this.determineRootPath();
+        this.langSuffix = this.determineLanguage();
+        // Construct path to the correct language module file
+        // e.g. includes/common-modules-en.html
+        const moduleFile = this.langSuffix ? `common-modules${this.langSuffix}.html` : 'common-modules.html';
+        // Use a version string instead of timestamp to allow caching
+        this.modulesPath = this.rootPath + 'includes/' + moduleFile + '?v=20260108';
+    }
+
+    determineRootPath() {
+        // Try to find the script tag that loaded this file
+        const script = document.currentScript || document.querySelector('script[src*="common-modules.js"]');
+        if (script) {
+            const src = script.getAttribute('src');
+            // src should be like "../../js/common-modules.js" or "js/common-modules.js"
+            const match = src.match(/^(.*)js\/common-modules\.js/);
+            if (match) {
+                return match[1]; // returns "../../" or ""
+            }
+        }
+        return ''; // Default to root if detection fails
+    }
+
+    determineLanguage() {
+        const fileName = window.location.pathname.split('/').pop() || 'index.html';
+        // Check if filename is like "en.html"
+        const parts = fileName.split('.');
+        if (parts.length > 1) {
+            const name = parts[0];
+            const langs = ['en', 'de', 'fr', 'ru', 'pt', 'es', 'ar', 'ja', 'ko', 'hi'];
+            if (langs.includes(name)) {
+                return '-' + name;
+            }
+        }
+        return ''; // Default (Chinese/Index)
     }
 
     // 加载公共模块HTML内容
@@ -19,10 +53,25 @@ class CommonModules {
         }
     }
 
-    // 解析模块HTML内容
+    // 解析模块HTML内容并重写链接
     parseModules(html) {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, 'text/html');
+        
+        // Rewrite all links to be relative to the current page's depth
+        // The links in common-modules.html are relative to ROOT (e.g. products/abc/index.html)
+        // We prepend rootPath (e.g. ../../)
+        
+        const rewriteAttribute = (el, attr) => {
+            const val = el.getAttribute(attr);
+            if (val && !val.startsWith('http') && !val.startsWith('#') && !val.startsWith('mailto:') && !val.startsWith('javascript:')) {
+                // If it's not absolute, prepend rootPath
+                el.setAttribute(attr, this.rootPath + val);
+            }
+        };
+
+        doc.querySelectorAll('[href]').forEach(el => rewriteAttribute(el, 'href'));
+        doc.querySelectorAll('[src]').forEach(el => rewriteAttribute(el, 'src'));
         
         return {
             header: doc.querySelector('header.top-bar'),
@@ -35,7 +84,7 @@ class CommonModules {
 
     // 优化的模块插入方法 - 使用innerHTML替换占位符
     insertModules(modules) {
-        // 批量替换占位符，减少DOM操作次数
+        // 批量替换占位符
         const replacements = [
             { id: 'top-bar-placeholder', content: modules.header?.outerHTML || '' },
             { id: 'main-nav-placeholder', content: modules.navigation?.outerHTML || '' },
@@ -43,7 +92,6 @@ class CommonModules {
             { id: 'footer-placeholder', content: modules.footer?.outerHTML || '' }
         ];
 
-        // 使用DocumentFragment批量更新DOM
         replacements.forEach(({ id, content }) => {
             const placeholder = document.getElementById(id);
             if (placeholder && content) {
@@ -57,46 +105,36 @@ class CommonModules {
 
     // 设置语言切换功能
     setupLanguageSwitch() {
+        // Update language switcher links to point to sibling files (en.html, index.html)
+        // instead of the hardcoded paths from common-modules.html
+        
+        const langLinks = document.querySelectorAll('.language-menu a');
+        if (langLinks.length === 0) return;
+
+        langLinks.forEach(link => {
+            const text = link.textContent.trim();
+            let targetFile = 'index.html'; // Default to Chinese
+            
+            if (text.includes('English')) targetFile = 'en.html';
+            else if (text.includes('Russian') || text.includes('Русский')) targetFile = 'ru.html';
+            else if (text.includes('French') || text.includes('Français')) targetFile = 'fr.html';
+            else if (text.includes('German') || text.includes('Deutsch')) targetFile = 'de.html';
+            else if (text.includes('Portuguese') || text.includes('Português')) targetFile = 'pt.html';
+            else if (text.includes('Spanish') || text.includes('Español')) targetFile = 'es.html';
+            else if (text.includes('Hindi') || text.includes('हिन्दी')) targetFile = 'hi.html';
+            else if (text.includes('Arabic') || text.includes('العربية')) targetFile = 'ar.html';
+            else if (text.includes('Japanese') || text.includes('日本語')) targetFile = 'ja.html';
+            else if (text.includes('Korean') || text.includes('한국어')) targetFile = 'ko.html';
+            else if (text.includes('Chinese') || text.includes('中文')) targetFile = 'index.html';
+            
+            link.href = targetFile;
+        });
+
+        // Handle main button
         const langSwitchBtn = document.getElementById('lang-switch-btn');
         if (langSwitchBtn) {
-            // 获取当前页面文件名
-            const currentPage = window.location.pathname.split('/').pop();
-            
-            // 中文页面到英文页面的映射
-            const pageMapping = {
-                '': 'index-en.html',
-                'index': 'index-en.html',
-                'product-anion-membrane.html': 'product-anion-membrane-en.html',
-                'product-zsm-membrane.html': 'product-zsm-membrane-en.html',
-                'product-pps-membrane.html': 'product-pps-membrane-en.html',
-                'product-carbon-paper.html': 'product-carbon-paper-en.html',
-                'product-electrolytic-cell.html': 'product-electrolytic-cell-en.html',
-                'product-porous-diffusion-layer.html': 'product-porous-diffusion-layer-en.html',
-                'product-desktop-system.html': 'product-desktop-system-en.html',
-                'product-bench-hydrogen-system.html': 'product-bench-hydrogen-system-en.html',
-                'product-multichannel-hydrogen-system.html': 'product-multichannel-hydrogen-system-en.html',
-                'product-co2-electrolysis-system.html': 'product-co2-electrolysis-system-en.html',
-                'product-co2-capture-conversion.html': 'product-co2-capture-conversion-en.html',
-                'product-homogenizer.html': 'product-homogenizer-en.html',
-                'product-joule-heating.html': 'product-joule-heating-en.html',
-                'product-pem-test-system.html': 'product-pem-test-system-en.html',
-                'product-non-metallic-frame.html': 'product-non-metallic-frame-en.html',
-                'service-lca.html': 'service-lca-en.html',
-                'service-tea.html': 'service-tea-en.html',
-                'service-database.html': 'service-database-en.html',
-                'contact.html': 'contact-en.html',
-                'index.html': 'index-en.html',
-                'electrochemical-materials.html': 'electrochemical-materials-en.html',
-                'electrochemical-testing-systems.html': 'electrochemical-testing-systems-en.html',
-                'electrochemical-equipment.html': 'electrochemical-equipment-en.html',
-                'technical-consulting-services.html': 'technical-consulting-services-en.html',
-                'product-economical-testing-platform.html': 'product-economical-testing-platform-en.html'
-            };
-            
-            const englishPage = pageMapping[currentPage];
-            if (englishPage) {
-                langSwitchBtn.href = englishPage;
-            }
+            // Optional: Set to next logical language or just '#' to trigger dropdown
+             langSwitchBtn.href = '#';
         }
     }
 
@@ -112,15 +150,12 @@ class CommonModules {
         }
     }
 
-    // 初始化所有模块 - 优化版本
+    // 初始化所有模块
     async init() {
         const modules = await this.loadModules();
         if (modules) {
-            // 使用优化的插入方法
             this.insertModules(modules);
             this.executeModuleScript(modules);
-            
-            // 触发自定义事件，通知模块加载完成
             document.dispatchEvent(new CustomEvent('commonModulesLoaded'));
         }
     }

@@ -5,6 +5,19 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeWebsite();
 });
 
+// 监听公共模块加载完成事件
+document.addEventListener('commonModulesLoaded', function() {
+    console.log('Common modules loaded, re-initializing navigation...');
+    initNavigation();
+    initModal(); // 重新初始化模态框（因为联系我们按钮可能在Header中）
+});
+
+document.addEventListener('englishModulesLoaded', function() {
+    console.log('English modules loaded, re-initializing navigation...');
+    initNavigation();
+    initModal();
+});
+
 // 初始化网站功能
 function initializeWebsite() {
     initNavigation();
@@ -56,6 +69,27 @@ function initNavigation() {
         }
     });
     
+    // 语言切换下拉菜单（点击支持）
+    const langSwitch = document.querySelector('.language-switch');
+    if (langSwitch) {
+        const langBtn = langSwitch.querySelector('.lang-btn');
+        
+        if (langBtn) {
+            langBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                langSwitch.classList.toggle('active');
+            });
+
+            // 点击外部关闭语言菜单
+            document.addEventListener('click', function(e) {
+                if (!langSwitch.contains(e.target)) {
+                    langSwitch.classList.remove('active');
+                }
+            });
+        }
+    }
+
     // 平滑滚动到锚点
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
