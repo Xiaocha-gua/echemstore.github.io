@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camada de Difusão Porosa - Feltro de Titânio e Níquel | echemstore</title>
+    <meta name="description" content="Camadas de difusão porosa premium: feltro de titânio, feltro de níquel, malha de níquel e espuma de níquel. 50-90% de porosidade, 0.2-6.0mm de espessura. Componentes personalizados para eletrolisadores PEM e células de combustível.">
+    <meta name="keywords" content="camada de difusão porosa, camada de difusão de gás, camada de transporte poroso, feltro de titânio, feltro de níquel, eletrolisador PTL, célula de combustível GDL, malha de níquel, espuma de níquel, componentes eletroquímicos">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://echemstore.cn/product-porous-diffusion-layer-pt.html">
+    <meta property="og:title" content="Camada de Difusão Porosa - Feltro de Titânio e Níquel | echemstore">
+    <meta property="og:description" content="Camadas de difusão porosa premium: feltro de titânio, feltro de níquel, malha de níquel e espuma de níquel. 50-90% de porosidade, 0.2-6.0mm de espessura. Componentes personalizados para eletrolisadores PEM e células de combustível.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://echemstore.cn/product-porous-diffusion-layer-pt.html">
+    <meta name="twitter:title" content="Camada de Difusão Porosa - Feltro de Titânio e Níquel | echemstore">
+    <meta name="twitter:description" content="Camadas de difusão porosa premium: feltro de titânio, feltro de níquel, malha de níquel e espuma de níquel. 50-90% de porosidade, 0.2-6.0mm de espessura. Componentes personalizados para eletrolisadores PEM e células de combustível.">
+    
+    <link rel="canonical" href="https://echemstore.cn/product-porous-diffusion-layer-pt.html">
+    <link rel="alternate" hreflang="en-GB" href="https://echemstore.cn/product-porous-diffusion-layer-en.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://echemstore.cn/product-porous-diffusion-layer.html">
+    <link rel="alternate" hreflang="pt" href="https://echemstore.cn/product-porous-diffusion-layer-pt.html">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <style>
+        .membrane-image {
+            text-align: center;
+        }
+        
+        .product-series-image {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            background: #f8f9fa;
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .product-series-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption h3 {
+            margin: 0 0 8px 0;
+            color: #0d47a1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .image-caption p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .animated-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .animated-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .animated-image img.active {
+            opacity: 1;
+        }
+        
+        .animated-image img:first-child {
+            position: relative;
+        }
+        
+        /* Manual control button styles */
+        .image-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .prev-btn {
+            left: 10px;
+        }
+        
+        .next-btn {
+            right: 10px;
+        }
+        
+        /* Indicator styles */
+        .image-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator-dot.active {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.2);
+        }
+        
+        .indicator-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .material-grid {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .product-series-image {
+                height: 280px;
+            }
+            
+            .material-grid {
+                padding: 0 15px;
+            }
+            
+            .image-nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .prev-btn {
+                left: 5px;
+            }
+            
+            .next-btn {
+                right: 5px;
+            }
+            
+            .indicator-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-series-image {
+                height: 240px;
+            }
+            
+            .material-grid {
+                padding: 0 10px;
+            }
+        }
+        
+        .material-types {
+            margin: 60px 0;
+        }
+        
+        .material-types h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .material-types .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .product-series-image {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            background: #f8f9fa;
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        .product-series-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 25px;
+        }
+        
+        /* Titanium Felt Series - Silver-grey theme */
+        .material-card.titanium {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .material-card.titanium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #6c757d, #adb5bd, #6c757d);
+        }
+        
+        .material-card.titanium:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        /* Nickel Felt Series - Green theme */
+        .material-card.nickel-felt {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .material-card.nickel-felt::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50, #66bb6a, #4caf50);
+        }
+        
+        .material-card.nickel-felt:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(76, 175, 80, 0.3);
+        }
+        
+        /* Nickel Mesh Series - Orange theme */
+        .material-card.nickel-mesh {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .material-card.nickel-mesh::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff9800, #ffb74d, #ff9800);
+        }
+        
+        .material-card.nickel-mesh:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 152, 0, 0.3);
+        }
+        
+        /* Foam Nickel Series - Purple theme */
+        .material-card.foam-nickel {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(156, 39, 176, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .material-card.foam-nickel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #9c27b0, #ba68c8, #9c27b0);
+        }
+        
+        .material-card.foam-nickel:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(156, 39, 176, 0.3);
+        }
+        
+        .material-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .material-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        
+        .titanium .material-icon {
+            background: linear-gradient(135deg, #6c757d, #adb5bd);
+        }
+        
+        .nickel-felt .material-icon {
+            background: linear-gradient(135deg, #4caf50, #66bb6a);
+        }
+        
+        .nickel-mesh .material-icon {
+            background: linear-gradient(135deg, #ff9800, #ffb74d);
+        }
+        
+        .foam-nickel .material-icon {
+            background: linear-gradient(135deg, #9c27b0, #ba68c8);
+        }
+        
+        .material-card h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        .material-card .series-overview {
+            margin: 20px 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            text-align: left;
+        }
+        
+        .material-card .key-features {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .material-card .key-features h4 {
+            margin: 0 0 15px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-tag {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #333;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .material-card .applications {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .material-card .applications strong {
+            color: #333;
+        }
+        
+        .material-card .product-specs {
+            margin-top: 15px;
+            padding: 12px;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(80, 200, 120, 0.1));
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #333;
+            border-left: 4px solid #4a90e2;
+        }
+        
+        .material-card .product-specs strong {
+            color: #000000;
+            font-weight: 600;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .material-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .material-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
+            }
+            
+            .material-card {
+                padding: 20px;
+            }
+            
+            .material-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-right: 15px;
+            }
+            
+            .material-card h3 {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .material-grid {
+                padding: 0 10px;
+            }
+        }
+    </style>
+     <link rel="stylesheet" href="../../css/style.css">
+     <link rel="stylesheet" href="../../css/responsive.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Camada de Difusão Porosa",
+        "description": "Materiais profissionais de camada de difusão porosa para sistemas eletroquímicos, incluindo séries de feltro de titânio, feltro de níquel, malha de níquel e espuma de níquel para eletrólise da água e células de combustível",
+        "brand": {
+            "@type": "Brand",
+            "name": "echemstore"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "echemstore Hydrogen Technology"
+        },
+        "category": "Materiais Nucleares Eletroquímicos",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+        },
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "Porosidade",
+                "value": "50-90%"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Faixa de Espessura",
+                "value": "0.2-6.0mm"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Tipos de Material",
+                "value": "Feltro de titânio, Feltro de níquel, Malha de níquel, Espuma de níquel"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P4S2R7G7');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4S2R7G7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- 顶部通栏将通过JavaScript动态加载 -->
+    <div id="top-bar-placeholder"></div>
+
+    <!-- 主导航将通过JavaScript动态加载 -->
+    <div id="main-nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Service Overview -->
+                <div class="service-overview">
+                    <div class="service-header">
+                        <h1>Camada de Difusão Porosa - Materiais Nucleares Eletroquímicos</h1>
+                        <p class="service-subtitle">Especialista em Materiais Ti-Ni | Quatro Séries de Produtos | Altamente Personalizável</p>
+                    </div>
+                    
+                    <div class="service-intro">
+                    <div class="intro-content">
+                        <div class="intro-text">
+                            <h2>Visão Geral do Produto</h2>
+                            <p>As camadas de difusão porosa são componentes críticos em sistemas eletroquímicos, essenciais para a eletrólise da água, células de combustível e síntese eletroquímica. Como meios de transporte para gases e líquidos, requerem excelente condutividade, resistência à corrosão e estrutura porosa controlada.</p>
+                            <p>A echemstore oferece quatro séries de materiais de camada de difusão porosa: feltro de titânio, feltro de níquel, malha de níquel de alto desempenho e espuma de níquel de alto desempenho para atender a diversos requisitos de aplicações eletroquímicas.</p>
+                            
+                            <h2>Vantagens Principais</h2>
+                            <ul class="feature-list">
+                                <li><strong>Diversidade de Materiais:</strong> Quatro séries de materiais cobrindo titânio e níquel de alto desempenho</li>
+                                <li><strong>Altamente Personalizável:</strong> 50-90% de porosidade, 0.2-6.0mm de espessura, tamanhos flexíveis</li>
+                                <li><strong>Desempenho Superior:</strong> Excelente condutividade, resistência à corrosão e resistência mecânica</li>
+                                <li><strong>Amplas Aplicações:</strong> Adequado para eletrolisadores PEM/AEM, células de combustível, filtração química</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-image">
+                            <div class="animated-image">
+                                <img src="../../images/多孔扩散层.png" alt="Produtos de Camada de Difusão Porosa - Materiais Nucleares Eletroquímicos" class="product-image active">
+                                <img src="../../images/多孔扩散层2.jpg" alt="Estrutura de Camada de Difusão Porosa - Série de Feltro de Titânio" class="product-image">
+                                <img src="../../images/多孔扩散层3.jpg" alt="Microestrutura de Camada de Difusão Porosa - Feltro de Níquel" class="product-image">
+                                <img src="../../images/多孔扩散层4.png" alt="Aplicação de Camada de Difusão Porosa - Série de Malha de Níquel" class="product-image">
+                                <img src="../../images/多孔扩散层5.jpg" alt="Produto Físico de Camada de Difusão Porosa - Série de Espuma de Níquel" class="product-image">
+                                <img src="../../images/多孔扩散层6.png" alt="Teste de Desempenho de Camada de Difusão Porosa - Condutividade" class="product-image">
+                                <img src="../../images/多孔扩散层7.png" alt="Processo de Fabricação de Camada de Difusão Porosa" class="product-image">
+                                <img src="../../images/多孔扩散层8.png" alt="Controle de Qualidade de Camada de Difusão Porosa - Garantia de Qualidade" class="product-image">
+                            </div>
+                        </div>
+                </div>
+
+
+
+                <!-- Material Types -->
+                <div class="material-types">
+                    <h2>Séries de Produtos</h2>
+                    <p class="section-subtitle">Quatro séries de materiais de camada de difusão porosa atendendo a diversos requisitos de aplicações eletroquímicas com desempenho superior e alta personalização</p>
+                    <div class="material-grid">
+                        <div class="material-card titanium">
+                            <div class="material-card-header">
+                                <div class="material-icon">
+                                    <i class="fas fa-atom"></i>
+                                </div>
+                                <h3>Série de Feltro de Titânio</h3>
+                            </div>
+                            <div class="series-overview">
+                                <p>O feltro de titânio da Echemstore utiliza tecnologia de sinterização avançada com fibras de titânio em nível micrométrico, apresentando estrutura de malha 3D e design de porosidade gradiente, oferecendo eficiência de eletrólise superior e durabilidade excepcional em ambientes agressivos.</p>
+                            </div>
+                            <div class="product-specs">
+                                <strong>Especificações:</strong> Espessura 0.2-2.0mm | Porosidade 60-85% | Tamanhos personalizados até 1000×2000mm
+                            </div>
+                            <img src="../../images/多孔扩散层.png" alt="Produto de Camada de Difusão Porosa da Série de Feltro de Titânio" class="product-series-image" style="margin-top: 20px;">
+                        </div>
+                        
+                        <div class="material-card nickel-felt">
+                            <div class="material-card-header">
+                                <div class="material-icon">
+                                    <i class="fas fa-th"></i>
+                                </div>
+                                <h3>Série de Feltro de Níquel</h3>
+                            </div>
+                            <div class="series-overview">
+                                <p>Fibras de níquel de alta pureza (Ni≥99.5%) sinterizadas em material poroso 3D, projetadas para aplicações eletroquímicas de alto desempenho com excepcional resistência à corrosão e durabilidade em ambientes agressivos.</p>
+                            </div>
+                            <div class="product-specs">
+                                <strong>Especificações:</strong> Espessura 0.3-3.0mm | Porosidade 50-85% | Diâmetro da fibra 8-50μm | Tamanhos personalizados até 1500×3000mm
+                            </div>
+                            <img src="../../images/多孔扩散层4.png" alt="Produto de Camada de Difusão Porosa da Série de Feltro de Níquel" class="product-series-image" style="margin-top: 20px;">
+                        </div>
+                        
+                        <div class="material-card nickel-mesh">
+                            <div class="material-card-header">
+                                <div class="material-icon">
+                                    <i class="fas fa-border-all"></i>
+                                </div>
+                                <h3>Série de Malha de Níquel de Alto Desempenho</h3>
+                            </div>
+                            <div class="series-overview">
+                                <p>Ligas Premium N4 (99.9% Ni) e N6 (99.6% Ni) com excelente resistência à corrosão, estabilidade térmica e condutividade para aplicações industriais exigentes.</p>
+                            </div>
+                            <div class="product-specs">
+                                <strong>Especificações:</strong> Malha 1-330 | Diâmetro do fio 0.025-2.0mm | Espessura 0.1-5.0mm | Tamanhos personalizados até 2000×6000mm
+                            </div>
+                            <img src="../../images/多孔扩散层6.png" alt="Produto de Camada de Difusão Porosa da Série de Malha de Níquel de Alto Desempenho" class="product-series-image" style="margin-top: 20px;">
+                        </div>
+                        
+                        <div class="material-card foam-nickel">
+                            <div class="material-card-header">
+                                <div class="material-icon">
+                                    <i class="fas fa-braille"></i>
+                                </div>
+                                <h3>Série de Espuma de Níquel de Alto Desempenho</h3>
+                            </div>
+                            <div class="series-overview">
+                                <p>Fabricado através de eletrodeposição, oxidação a alta temperatura e processos de redução de hidrogênio, apresentando propriedades estruturais e funcionais únicas para eletrólise, eletrodos de bateria e aplicações de catalisadores.</p>
+                            </div>
+                            <div class="product-specs">
+                                <strong>Especificações:</strong> Espessura 1.3-6.0mm | Porosidade 35-110 PPI | Razão de vazio 85-98% | Tamanhos personalizados até 1200×2400mm
+                            </div>
+                            <img src="../../images/多孔扩散层7.png" alt="Produto de Camada de Difusão Porosa da Série de Espuma de Níquel de Alto Desempenho" class="product-series-image" style="margin-top: 20px;">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 联系咨询部分将通过JavaScript动态加载 -->
+    <div id="contact-section-placeholder"></div>
+
+    <!-- 页脚将通过JavaScript动态加载 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/common-modules-pt.js"></script>
+    <script src="../../js/main.js"></script>
+    
+    <script>
+        // 图片轮播功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedImageContainer = document.querySelector('.animated-image');
+            if (!animatedImageContainer) return;
+            
+            const images = animatedImageContainer.querySelectorAll('.product-image');
+            if (images.length <= 1) return;
+            
+            let currentIndex = 0;
+            let autoSlideInterval;
+            
+            // 创建导航按钮
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'image-nav-btn prev-btn';
+            prevBtn.innerHTML = '‹';
+            prevBtn.setAttribute('aria-label', 'Previous image');
+            
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'image-nav-btn next-btn';
+            nextBtn.innerHTML = '›';
+            nextBtn.setAttribute('aria-label', 'Next image');
+            
+            // 创建指示器容器
+            const indicatorsContainer = document.createElement('div');
+            indicatorsContainer.className = 'image-indicators';
+            
+            // 创建指示器点
+            for (let i = 0; i < images.length; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'indicator-dot';
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to image ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i));
+                indicatorsContainer.appendChild(dot);
+            }
+            
+            // 添加元素到容器
+            animatedImageContainer.appendChild(prevBtn);
+            animatedImageContainer.appendChild(nextBtn);
+            animatedImageContainer.appendChild(indicatorsContainer);
+            
+            // 显示指定图片
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle('active', i === index);
+                });
+                
+                const dots = indicatorsContainer.querySelectorAll('.indicator-dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+            
+            // 跳转到指定幻灯片
+            function goToSlide(index) {
+                currentIndex = index;
+                showImage(currentIndex);
+                resetAutoSlide();
+            }
+            
+            // 下一张图片
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }
+            
+            // 上一张图片
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            }
+            
+            // 开始自动轮播
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextImage, 4000);
+            }
+            
+            // 重置自动轮播
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                startAutoSlide();
+            }
+            
+            // 绑定事件
+            nextBtn.addEventListener('click', () => {
+                nextImage();
+                resetAutoSlide();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                prevImage();
+                resetAutoSlide();
+            });
+            
+            // 鼠标悬停时暂停自动轮播
+            animatedImageContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            
+            animatedImageContainer.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+            
+            // 键盘导航
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    prevImage();
+                    resetAutoSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextImage();
+                    resetAutoSlide();
+                }
+            });
+            
+            // 启动自动轮播
+            startAutoSlide();
+        });
+    </script>
+</body>
+</html>
