@@ -4679,6 +4679,58 @@ h2, h3, h4 {
     box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
 }
 
+/* 语言切换下拉菜单样式 */
+.language-switch {
+    position: relative;
+    display: inline-block;
+}
+
+.language-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    border-radius: 4px;
+    padding: 8px 0;
+    list-style: none;
+    margin-top: 5px;
+    border: 1px solid #e9ecef;
+}
+
+.language-switch:hover .language-menu,
+.language-switch.active .language-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.language-menu li {
+    display: block;
+}
+
+.language-menu li a {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    text-align: left;
+}
+
+.language-menu li a:hover {
+    background-color: #f8f9fa;
+    color: #667eea;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 /* 主导航栏 */
 .main-nav {
     background: rgba(255, 255, 255, 0.95);
