@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Célula Eletrolítica Personalizada - Alta Precisão | eChemStore</title>
+    <meta name="description" content="Células eletrolíticas personalizadas de alta precisão com controle de ±0.5℃, design multi-câmara, área de reação de 1-25cm². Usinagem CNC para pesquisa de H₂, CO₂. Solicite um orçamento hoje!">
+    <meta name="keywords" content="célula eletrolítica personalizada, equipamento eletroquímico de precisão, célula multi-câmara, célula com controle de temperatura, célula eletrolítica CNC, produção de hidrogênio, eletrólise de CO2, pesquisa eletroquímica, echemstore">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://echemstore.cn/product-electrolytic-cell-pt.html">
+    <meta property="og:title" content="Célula Eletrolítica Personalizada - Alta Precisão | eChemStore">
+    <meta property="og:description" content="Células eletrolíticas personalizadas de alta precisão com controle de ±0.5℃, design multi-câmara, área de reação de 1-25cm². Usinagem CNC para pesquisa de H₂, CO₂. Solicite um orçamento hoje!">
+    <meta property="og:image" content="https://echemstore.cn/images/电解池1.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://echemstore.cn/product-electrolytic-cell-pt.html">
+    <meta property="twitter:title" content="Célula Eletrolítica Personalizada - Alta Precisão | eChemStore">
+    <meta property="twitter:description" content="Células eletrolíticas personalizadas de alta precisão com controle de ±0.5℃, design multi-câmara, área de reação de 1-25cm². Usinagem CNC para pesquisa de H₂, CO₂. Solicite um orçamento hoje!">
+    <meta property="twitter:image" content="https://echemstore.cn/images/电解池1.png">
+    
+    <link rel="canonical" href="https://echemstore.cn/product-electrolytic-cell-pt.html">
+    <link rel="alternate" hreflang="pt" href="https://echemstore.cn/product-electrolytic-cell-pt.html">
+    <link rel="alternate" hreflang="en" href="https://echemstore.cn/product-electrolytic-cell-en.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://echemstore.cn/product-electrolytic-cell.html">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <style>
+        .cell-image {
+            text-align: center;
+        }
+        
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption h3 {
+            margin: 0 0 8px 0;
+            color: #0d47a1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .image-caption p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .animated-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .animated-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .animated-image img.active {
+            opacity: 1;
+        }
+        
+        .animated-image img:first-child {
+            position: relative;
+        }
+        
+        /* Manual control button styles */
+        .image-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .prev-btn {
+            left: 10px;
+        }
+        
+        .next-btn {
+            right: 10px;
+        }
+        
+        /* Indicator styles */
+        .image-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator-dot.active {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.2);
+        }
+        
+        .indicator-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .image-nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .prev-btn {
+                left: 5px;
+            }
+            
+            .next-btn {
+                right: 5px;
+            }
+            
+            .indicator-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">    
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P4S2R7G7');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Célula Eletrolítica de Alta Precisão",
+        "description": "eChemStore fornece células eletrolíticas de alta precisão com configurações de câmara dupla/tripla, controle de temperatura de ±0.5℃, área de reação personalizável de 1×1cm²~25cm², usinagem CNC com vedação à prova de vazamentos para produção de hidrogênio, conversão de CO₂ e pesquisa de eletrossíntese orgânica.",
+        "brand": {
+            "@type": "Brand",
+            "name": "eChemStore"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "eChemStore",
+            "url": "https://echemstore.cn"
+        },
+        "category": "Equipamento Eletroquímico",
+        "url": "https://echemstore.cn/product-electrolytic-cell-pt.html",
+        "image": [
+            "https://echemstore.cn/images/电解池1.png",
+            "https://echemstore.cn/images/电解池2.png",
+            "https://echemstore.cn/images/电解池3.png",
+            "https://echemstore.cn/images/电解池4.jpg",
+            "https://echemstore.cn/images/电解池5.png"
+        ],
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+        },
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "Configuração da Câmara",
+                "value": "Opções de Dupla/Tripla Câmara"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Precisão do Controle de Temperatura",
+                "value": "±0.5℃"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Área de Reação",
+                "value": "1×1cm²~25cm² Personalizável"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Temperatura de Operação",
+                "value": "-20°C~80°C"
+            }
+        ]
+    }
+    </script>
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4S2R7G7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Top Bar Placeholder -->
+    <div id="top-bar-placeholder"></div>
+
+    <!-- Main Navigation Placeholder -->
+    <div id="main-nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Service Overview -->
+                <div class="service-overview">
+                    <div class="service-header">
+                        <h1>Célula Eletrolítica - Equipamento Eletroquímico Multi-Câmara</h1>
+                        <p class="service-subtitle">Configuração Flexível · Fabricação de Precisão · Soluções Personalizadas</p>
+                    </div>
+                    
+                    <div class="service-intro">
+                    <div class="intro-content">
+                        <div class="intro-text">
+                            <h2>Visão Geral do Produto</h2>
+                            <p>Células eletrolíticas projetadas com precisão com usinagem CNC para vedação à prova de vazamentos. Configurações de câmara dupla/tripla, controle de temperatura opcional, áreas de reação personalizáveis de 1×1cm²~5×5cm².</p>
+                            
+                            <h2>Principais Características</h2>
+                            <ul class="feature-list">
+                                <li><strong>Design multi-câmara:</strong> Opções de câmara dupla/tripla</li>
+                                <li><strong>Controle de temperatura:</strong> Precisão de ±0.5℃</li>
+                                <li><strong>Personalizável:</strong> Área de reação, materiais, canais de fluxo</li>
+                                <li><strong>Aplicações versáteis:</strong> Da pesquisa ao uso industrial</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-image">
+                            <div class="animated-image">
+                                <img src="../../images/电解池1.png" alt="Produto Célula Eletrolítica - Equipamento Eletroquímico Multi-Câmara" class="product-image active">
+                                <img src="../../images/电解池2.png" alt="Estrutura da Célula Eletrolítica - Configuração de Câmara Dupla" class="product-image">
+                                <img src="../../images/电解池3.png" alt="Estrutura Interna da Célula Eletrolítica - Usinagem de Precisão" class="product-image">
+                                <img src="../../images/电解池4.jpg" alt="Unidade Física da Célula Eletrolítica - Função de Controle de Temperatura" class="product-image">
+                                <img src="../../images/电解池5.png" alt="Design de Interface da Célula Eletrolítica - Conexões Swagelok Padrão" class="product-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Configuration Options -->
+                <div class="technical-advantages">
+                    <h2>Opções de Configuração</h2>
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+                                    <rect x="20" y="20" width="8" height="20" fill="#4caf50" opacity="0.7"/>
+                                    <rect x="32" y="20" width="8" height="20" fill="#4caf50" opacity="0.7"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#4caf50">2/3 Câmaras</text>
+                                </svg>
+                            </div>
+                            <h3>Estrutura da Câmara</h3>
+                            <p><strong>Câmara Dupla:</strong> Compartimentos separados de anólito/católito<br>
+                            <strong>Câmara Tripla:</strong> Compartimento adicional para eletrodo de referência</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="8" fill="none" stroke="#ff9800" stroke-width="2"/>
+                                    <path d="M30 22 L30 38 M22 30 L38 30" stroke="#ff9800" stroke-width="2"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff9800">±0.5℃</text>
+                                </svg>
+                            </div>
+                            <h3>Controle de Temperatura</h3>
+                            <p><strong>Padrão:</strong> Faixa de operação -20°C~80°C<br>
+                            <strong>Controlado:</strong> Precisão de ±0.5℃</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                                    <rect x="20" y="20" width="20" height="20" fill="none" stroke="#9c27b0" stroke-width="2"/>
+                                    <text x="30" y="35" text-anchor="middle" font-family="Arial" font-size="10" fill="#9c27b0">1×1</text>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#9c27b0">~25cm²</text>
+                                </svg>
+                            </div>
+                            <h3>Área de Reação e Materiais</h3>
+                            <p><strong>Área:</strong> 1×1cm²~25cm² personalizável<br>
+                            <strong>Materiais:</strong> PMMA/PTFE, aço 316L, níquel, titânio</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e1f5fe" stroke="#00bcd4" stroke-width="2"/>
+                                    <path d="M15 30 Q30 20 45 30" stroke="#00bcd4" stroke-width="2" fill="none"/>
+                                    <circle cx="15" cy="30" r="2" fill="#00bcd4"/>
+                                    <circle cx="45" cy="30" r="2" fill="#00bcd4"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#00bcd4">1/4"</text>
+                                </svg>
+                            </div>
+                            <h3>Conexões e Canais de Fluxo</h3>
+                            <p><strong>Conexões:</strong> Conexões Swagelok padrão de 1/4"<br>
+                            <strong>Design de Fluxo:</strong> Padrões serpentina/paralelos disponíveis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Advantages -->
+                <div class="technical-advantages">
+                    <h2>Principais Vantagens</h2>
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+                                    <path d="M20 30 L25 35 L40 20" stroke="#4caf50" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#4caf50">CNC</text>
+                                </svg>
+                            </div>
+                            <h3>Fabricação de Precisão</h3>
+                            <p><strong>Usinagem CNC</strong> garante vedação à prova de vazamentos e resultados reprodutíveis</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+                                    <path d="M15 35 Q30 20 45 35" stroke="#ff9800" stroke-width="3" fill="none"/>
+                                    <path d="M20 40 Q30 25 40 40" stroke="#ff9800" stroke-width="2" fill="none"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff9800">Eficiente</text>
+                                </svg>
+                            </div>
+                            <h3>Transferência de Massa Aprimorada</h3>
+                            <p><strong>Canais de fluxo otimizados</strong> melhoram a eficiência da reação</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="12" fill="none" stroke="#9c27b0" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="3" fill="#9c27b0"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#9c27b0">Visual</text>
+                                </svg>
+                            </div>
+                            <h3>Monitoramento Visual</h3>
+                            <p><strong>Janelas transparentes</strong> permitem o monitoramento da reação em tempo real</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e1f5fe" stroke="#00bcd4" stroke-width="2"/>
+                                    <rect x="20" y="20" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <rect x="32" y="20" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <rect x="20" y="32" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <rect x="32" y="32" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#00bcd4">Flexível</text>
+                                </svg>
+                            </div>
+                            <h3>Compatibilidade do Sistema</h3>
+                            <p><strong>Design versátil</strong> suporta MEA e sistemas de três eletrodos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Fields -->
+                <div class="technical-details">
+                    <h2>Aplicações</h2>
+                    <div class="details-content-single">
+                        <div class="details-text-full">
+                            <div class="specifications-section">
+                                <div class="specs-grid-four-columns">
+                                    <div class="spec-category">
+                                        <h4>Aplicações de Energia</h4>
+                                        <ul>
+                                            <li>Produção de hidrogênio verde</li>
+                                            <li>Testes de bateria de fluxo</li>
+                                            <li>Pesquisa em células a combustível</li>
+                                        </ul>
+                                    </div>
+                                    <div class="spec-category">
+                                        <h4>Meio Ambiente e Carbono</h4>
+                                        <ul>
+                                            <li>Pesquisa de redução de CO₂</li>
+                                            <li>Conversão de CO₂ em combustível</li>
+                                            <li>Captura e utilização de carbono</li>
+                                        </ul>
+                                    </div>
+                                    <div class="spec-category">
+                                        <h4>Síntese Química</h4>
+                                        <ul>
+                                            <li>Eletrossíntese orgânica</li>
+                                            <li>Avaliação de catalisadores</li>
+                                            <li>Estudos de mecanismos de reação</li>
+                                        </ul>
+                                    </div>
+                                    <div class="spec-category">
+                                        <h4>Pesquisa e Testes</h4>
+                                        <ul>
+                                            <li>Testes de laboratório</li>
+                                            <li>Validação de MEA</li>
+                                            <li>Pesquisa de múltiplos eletrodos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section Placeholder -->
+                <div id="contact-section-placeholder"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/common-modules-pt.js"></script>
+    <script>
+        // Image carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.animated-image img');
+            let currentIndex = 0;
+            let autoSlideInterval;
+            
+            function showImage(index) {
+                // Hide all images
+                images.forEach(img => img.classList.remove('active'));
+                
+                // Show specified image
+                images[index].classList.add('active');
+                currentIndex = index;
+            }
+            
+            function showNextImage() {
+                const nextIndex = (currentIndex + 1) % images.length;
+                showImage(nextIndex);
+            }
+            
+            function showPrevImage() {
+                const prevIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(prevIndex);
+            }
+            
+            // Create manual control buttons
+            function createControls() {
+                const imageContainer = document.querySelector('.animated-image');
+                
+                // Create left arrow
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'image-nav-btn prev-btn';
+                prevBtn.innerHTML = '‹';
+                prevBtn.onclick = function() {
+                    showPrevImage();
+                    resetAutoSlide();
+                };
+                
+                // Create right arrow
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'image-nav-btn next-btn';
+                nextBtn.innerHTML = '›';
+                nextBtn.onclick = function() {
+                    showNextImage();
+                    resetAutoSlide();
+                };
+                
+                // Create indicators
+                const indicators = document.createElement('div');
+                indicators.className = 'image-indicators';
+                
+                for (let i = 0; i < images.length; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'indicator-dot';
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = function() {
+                        showImage(i);
+                        resetAutoSlide();
+                    };
+                    indicators.appendChild(dot);
+                }
+                
+                imageContainer.appendChild(prevBtn);
+                imageContainer.appendChild(nextBtn);
+                imageContainer.appendChild(indicators);
+            }
+            
+            function updateIndicators() {
+                const dots = document.querySelectorAll('.indicator-dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(() => {
+                    showNextImage();
+                    updateIndicators();
+                }, 7000);
+            }
+            
+            // Initialize
+            createControls();
+            
+            // Auto-slide every 7 seconds
+            autoSlideInterval = setInterval(() => {
+                showNextImage();
+                updateIndicators();
+            }, 7000);
+        });
+    </script>
+</body>
+</html>

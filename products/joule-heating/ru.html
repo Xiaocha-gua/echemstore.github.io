@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система джоулева нагрева 3000°C - Быстрый синтез материалов | eChemStore</title>
+    <meta name="description" content="Профессиональная система импульсного джоулева нагрева до 3000°C для сверхбыстрого синтеза материалов. Идеально для наноматериалов, катализаторов и аккумуляторов.">
+    <meta name="keywords" content="импульсный джоулев нагрев, система нагрева 3000°C, быстрая термообработка, оборудование для синтеза материалов, наноматериалы, катализаторы, исследования аккумуляторов, сверхбыстрый нагрев, eChemStore">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://echemstore.cn/product-joule-heating-ru.html">
+    <meta property="og:title" content="Система джоулева нагрева 3000°C - Быстрый синтез материалов | eChemStore">
+    <meta property="og:description" content="Профессиональная система импульсного джоулева нагрева до 3000°C для сверхбыстрого синтеза материалов. Идеально для наноматериалов, катализаторов и аккумуляторов.">
+    <meta property="og:image" content="https://echemstore.cn/images/焦耳热装置.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://echemstore.cn/product-joule-heating-ru.html">
+    <meta property="twitter:title" content="Система джоулева нагрева 3000°C - Быстрый синтез материалов">
+    <meta property="twitter:description" content="Профессиональная система импульсного джоулева нагрева до 3000°C для сверхбыстрого синтеза материалов.">
+    <meta property="twitter:image" content="https://echemstore.cn/images/焦耳热装置.jpg">
+    
+    <link rel="canonical" href="https://echemstore.cn/product-joule-heating-ru.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://echemstore.cn/product-joule-heating.html">
+    <link rel="alternate" hreflang="en" href="https://echemstore.cn/product-joule-heating-en.html">
+    <link rel="alternate" hreflang="ru" href="https://echemstore.cn/product-joule-heating-ru.html">
+    <link rel="alternate" hreflang="fr" href="https://echemstore.cn/product-joule-heating-fr.html">
+    <link rel="alternate" hreflang="de" href="https://echemstore.cn/product-joule-heating-de.html">
+    <link rel="alternate" hreflang="es" href="https://echemstore.cn/product-joule-heating-es.html">
+    <link rel="alternate" hreflang="pt" href="https://echemstore.cn/product-joule-heating-pt.html">
+    <link rel="alternate" hreflang="ja" href="https://echemstore.cn/product-joule-heating-ja.html">
+    <link rel="alternate" hreflang="ko" href="https://echemstore.cn/product-joule-heating-ko.html">
+    <link rel="alternate" hreflang="ar" href="https://echemstore.cn/product-joule-heating-ar.html">
+    <link rel="alternate" hreflang="hi" href="https://echemstore.cn/product-joule-heating-hi.html">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <style>
+        /* Image carousel styles */
+        .animated-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .animated-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .animated-image img.active {
+            opacity: 1;
+        }
+        
+        .animated-image img:first-child {
+            position: relative;
+        }
+        
+        /* Manual control button styles */
+        .image-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .prev-btn {
+            left: 10px;
+        }
+        
+        .next-btn {
+            right: 10px;
+        }
+        
+        /* Indicator styles */
+        .image-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator-dot.active {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.2);
+        }
+        
+        .indicator-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .image-nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .prev-btn {
+                left: 5px;
+            }
+            
+            .next-btn {
+                right: 5px;
+            }
+            
+            .indicator-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Устройство джоулева нагрева EQ-JH-01",
+      "description": "eChemStore предлагает профессиональное устройство джоулева нагрева EQ-JH-01, нагрев до 3000°C за 0-10 секунд, макс. скорость нагрева 10000K/с, точность контроля ±0.5%. Идеально для синтеза наночастиц, одноатомных катализаторов.",
+      "brand": {
+        "@type": "Brand",
+        "name": "eChemStore"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "eChemStore",
+        "url": "https://echemstore.cn"
+      },
+      "category": "Electrochemical Equipment",
+      "url": "https://echemstore.cn/product-joule-heating-ru.html",
+      "image": "https://echemstore.cn/images/焦耳热装置.jpg",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "seller": {
+          "@type": "Organization",
+          "name": "eChemStore"
+        }
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Максимальная температура",
+          "value": "3000°C"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Время нагрева",
+          "value": "0~10 секунд"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Скорость нагрева",
+          "value": "До 10000K/с"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Точность контроля",
+          "value": "±0.5%"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P4S2R7G7');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4S2R7G7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- 顶部通栏占位符 -->
+    <div id="top-bar-placeholder"></div>
+    
+    <!-- 主导航占位符 -->
+    <div id="main-nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Service Overview -->
+                <div class="service-overview">
+                    <div class="service-header">
+                        <h1>Устройство джоулева нагрева</h1>
+                        <p class="service-subtitle">Нагрев за секунды · Экстремальное тепловое поле · Точный контроль</p>
+                    </div>
+                    
+                    <div class="service-intro">
+                        <div class="intro-content">
+                            <div class="intro-text">
+                                <h2>Обзор продукта</h2>
+                                <p>Устройство джоулева нагрева eChemStore EQ-JH-01 — это инновационное оборудование для быстрой термообработки/синтеза, использующее эффект Джоуля в проводящих материалах. Благодаря электрической среде материалы могут достигать экстремальных температур (1000~3000°C) за сверхкороткое время (0~10 секунд) со скоростью нагрева до 10000K/с. Устройство обеспечивает электрическую среду как для проводящих, так и для непроводящих материалов, с диапазоном измерения температуры 400~3200°C, и широко используется в исследованиях аккумуляторов, каталитической керамики и металлических материалов.</p>
+                                
+                                <p><strong>Принцип джоулева нагрева:</strong> Когда ток проходит через проводящие материалы, электрическая энергия преобразуется в тепловую из-за сопротивления материала, генерируя джоулево тепло. Благодаря точному контролю тока и напряжения достигается быстрый и равномерный нагрев до требуемых температур за крайне короткое время для исследований переходной термодинамики и анализа эволюции материалов в экстремальных условиях.</p>
+                                
+                                <h2>Ключевые особенности</h2>
+                                <ul class="feature-list">
+                                    <li><strong>Переходное тепловое поле:</strong> Нагрев до 3000°C за 0~10 секунд, макс. скорость нагрева 10000K/с</li>
+                                    <li><strong>Высокоточный контроль:</strong> Точность контроля температуры ±0.5%, повторяемость ±2°C, термометр Eurotherm (Германия)</li>
+                                    <li><strong>Многомерная адаптация:</strong> Вакуумная камера из нержавеющей стали 316L, окно наблюдения φ16 мм, поддержка вакуума/атмосферы</li>
+                                    <li><strong>Гибкая конфигурация:</strong> От однофазного 220В до трехфазного 380В, от сенсорного управления до интеграции RS485</li>
+                                    <li><strong>Широкое применение:</strong> Синтез наночастиц, одноатомные катализаторы, синтез высокоэнтропийных сплавов</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-image">
+                                <div class="animated-image">
+                                    <img src="../../images/焦耳热装置.jpg" alt="Устройство джоулева нагрева eChemStore EQ-JH-01" class="product-image active">
+                                    <img src="../../images/焦耳热装置2.png" alt="Технические детали устройства джоулева нагрева" class="product-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Advantages -->
+                <div class="technical-advantages">
+                    <h2>Основные технические преимущества</h2>
+                    <div class="advantages-grid-four-columns">
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+                                    <path d="M20 30 L26 36 L40 22" stroke="#4caf50" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Переходное тепловое поле</h3>
+                            <p>На основе эффекта джоулева нагрева достигается <strong>сверхбыстрый нагрев до 3000°C за 0~10 секунд</strong>, преодолевая "медленный отклик" традиционного нагрева</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+                                    <rect x="20" y="20" width="20" height="20" fill="none" stroke="#ff9800" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="8" fill="#ff9800"/>
+                                </svg>
+                            </div>
+                            <h3>Высокоточная система контроля</h3>
+                            <p>Оснащено немецким термометром Eurotherm, <strong>точность измерения ±0.5%, повторяемость ±2°C</strong>, обеспечивая надежность данных в экстремальных тепловых полях</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                                    <path d="M15 30 Q30 15 45 30 Q30 45 15 30" fill="#9c27b0"/>
+                                </svg>
+                            </div>
+                            <h3>Многомерная адаптация</h3>
+                            <p>Вакуумная камера из нержавеющей стали 316L или алюминиевого сплава, <strong>окно наблюдения φ16 мм</strong> для мониторинга реакции в реальном времени</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e1f5fe" stroke="#00bcd4" stroke-width="2"/>
+                                    <rect x="20" y="15" width="20" height="30" fill="none" stroke="#00bcd4" stroke-width="2"/>
+                                    <line x1="25" y1="20" x2="35" y2="20" stroke="#00bcd4" stroke-width="2"/>
+                                    <line x1="25" y1="30" x2="35" y2="30" stroke="#00bcd4" stroke-width="2"/>
+                                    <line x1="25" y1="40" x2="35" y2="40" stroke="#00bcd4" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Полный охват исследований</h3>
+                            <p>Подходит для <strong>энергетики, материаловедения, передового синтеза</strong> и других исследований переходной термодинамики</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Specifications -->
+                <div class="product-specifications">
+                    <h2>Технические характеристики</h2>
+                    <p>eChemStore предлагает две конфигурации устройств джоулева нагрева для различных нужд от лабораторных НИОКР до промышленных применений.</p>
+                    <div class="specifications-table">
+                        <table class="spec-table">
+                            <thead>
+                                <tr>
+                                    <th>Параметры продукта</th>
+                                    <th>Премиум модель (CIS-JH-V4.0.0)</th>
+                                    <th>Компактная модель (CIS-JH-V4.0.0-TD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Электропитание</strong></td>
+                                    <td>Трехфазное 380В/40А</td>
+                                    <td>AC220В/16А</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Выходное напряжение</strong></td>
+                                    <td>0-40В</td>
+                                    <td>0-12В</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Выходной ток</strong></td>
+                                    <td>0-500А</td>
+                                    <td>0-170А</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Время нарастания тока</strong></td>
+                                    <td>2мс</td>
+                                    <td>20мс</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Мин. ширина импульса</strong></td>
+                                    <td>1мс</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Количество импульсов</strong></td>
+                                    <td>255</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Цикл сбора данных</strong></td>
+                                    <td>5мс</td>
+                                    <td>5мс</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Коммуникация</strong></td>
+                                    <td>RS485+Ethernet+USB</td>
+                                    <td>RS485+Ethernet+USB</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Сбор данных</strong></td>
+                                    <td>Сенсорный экран+ПК</td>
+                                    <td>Сенсорный экран+ПК</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Управление данными</strong></td>
+                                    <td>Сенсорный экран+ПО</td>
+                                    <td>Сенсорный экран</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Содержание данных</strong></td>
+                                    <td>Температура, напряжение, ток в реальном времени</td>
+                                    <td>Температура, напряжение, ток в реальном времени</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Зажим электродов</strong></td>
+                                    <td>Фиксированный тип</td>
+                                    <td>Регулируемое расстояние</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Максимальная температура</strong></td>
+                                    <td>3000°C (зависит от типа столика и спецификаций)</td>
+                                    <td>1800°C (зависит от типа столика и спецификаций)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Длительный нагрев</strong></td>
+                                    <td>В пределах 2000°C длительно (на примере графитовой пластины 100×20×1мм)</td>
+                                    <td>Нет (по запросу)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Режимы управления</strong></td>
+                                    <td>Удержание температуры, программное управление, линейное изменение, термический удар, совместимость с S-кривой, синусоидой</td>
+                                    <td>Удержание температуры, линейное изменение, ручной режим</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Измерение температуры</strong></td>
+                                    <td>Инфракрасная термометрия</td>
+                                    <td>Инфракрасная термометрия</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Диапазон температур</strong></td>
+                                    <td>250-2000°C/700-3200°C/550-3000°C (импортный)</td>
+                                    <td>100-1400°C/250-2000°C</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Охлаждение питания</strong></td>
+                                    <td>Водяное охлаждение</td>
+                                    <td>Воздушное охлаждение</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Вакуумная камера</strong></td>
+                                    <td>Нержавеющая сталь 304, квадратная, окно наблюдения φ16мм, сапфировое стекло, объем ~400мл, водяное охлаждение</td>
+                                    <td>Алюминиевый сплав, квадратная, окно наблюдения φ16мм, сапфировое стекло, объем ~400мл</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Газовая система</strong></td>
+                                    <td>1 вход, 1 вакуум, 1 выход</td>
+                                    <td>1 вход, 1 вакуум, 1 выход</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Вакуумный насос</strong></td>
+                                    <td>Стандартный Feiyue VRD-8, управление с экрана</td>
+                                    <td>Стандартный роторно-лопастной насос OPR-DV2, управление с экрана</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Стандартный столик образца</strong></td>
+                                    <td>Гибкая графитовая бумага, графитовая пластина, графитовая трубка, графитовая лодочка (совместим с др.)</td>
+                                    <td>Графитовая бумага, графитовая лодочка 50мм, графитовая трубка 20мм, вольфрамовая лодочка 50мм</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Размер столика (Настраиваемый)</strong></td>
+                                    <td>≤100мм×15мм×0.2мм</td>
+                                    <td>≤55мм×10мм×0.05мм</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Количество образца</strong></td>
+                                    <td>500мг (удельный вес 1)</td>
+                                    <td>50мг</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Габариты (Д×Ш×В)</strong></td>
+                                    <td>~750мм×610мм×660мм (фактические могут отличаться)</td>
+                                    <td>~510мм×624мм×600мм (фактические могут отличаться)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Standard Configuration -->
+                <div class="standard-configuration">
+                    <h2>Детали стандартной конфигурации</h2>
+                    <div class="configuration-grid">
+                        <div class="config-section">
+                            <h3>Стандарты материалов</h3>
+                            <ul class="config-list">
+                                <li><strong>Класс материалов:</strong> Промышленные высокотемпературные коррозионностойкие материалы</li>
+                                <li><strong>Стандарт герметизации:</strong> Высокотемпературная вакуумная система герметизации</li>
+                                <li><strong>Сертификация:</strong> Сертификат CE, соответствует международным стандартам безопасности</li>
+                                <li><strong>Обеспечение качества:</strong> Строгая система контроля качества</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="config-section">
+                            <h3>Функции управления</h3>
+                            <ul class="config-list">
+                                <li><strong>Умное управление:</strong> Множество режимов, поддержка пользовательских кривых</li>
+                                <li><strong>Мониторинг в реальном времени:</strong> Отображение и запись данных всего процесса</li>
+                                <li><strong>Мульти-коммуникация:</strong> Поддержка различных методов передачи данных</li>
+                                <li><strong>Защита безопасности:</strong> Множественные механизмы защиты</li>
+                                <li><strong>Интерфейс пользователя:</strong> Интуитивно понятный сенсорный интерфейс</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="config-section">
+                            <h3>Гарантийное обслуживание</h3>
+                            <ul class="config-list">
+                                <li><strong>Гарантийный срок:</strong> 1 год гарантии на производственные дефекты</li>
+                                <li><strong>Техническая поддержка:</strong> Профессиональная поддержка команды</li>
+                                <li><strong>Обучение:</strong> Обучение эксплуатации и руководство по обслуживанию</li>
+                                <li><strong>Поставка запчастей:</strong> Гарантия долгосрочной поставки запчастей</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Optional Configuration -->
+                <div class="optional-configuration">
+                    <h2>Опциональные конфигурации</h2>
+                    <p>В зависимости от требований применения, мы предоставляем различные опции для персонализированной настройки оборудования.</p>
+                    <div class="optional-grid">
+                        <div class="optional-card">
+                            <h3>Продвинутая температурная система</h3>
+                            <ul>
+                                <li><strong>Импортный термометр:</strong> Более высокая точность измерения температуры</li>
+                                <li><strong>Многоточечная температура:</strong> Обновление до многоканального мониторинга</li>
+                                <li><strong>Расширенный диапазон:</strong> Для особых температурных требований</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="optional-card">
+                            <h3>Пользовательский столик образца</h3>
+                            <ul>
+                                <li><strong>Особые материалы:</strong> Вольфрамовая лодочка, керамическая лодочка и др.</li>
+                                <li><strong>Настройка размера:</strong> Размеры под требования образца</li>
+                                <li><strong>Настройка формы:</strong> Дизайн столика особой формы</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="optional-card">
+                            <h3>Апгрейд контроля среды</h3>
+                            <ul>
+                                <li><strong>Точный контроль атмосферы:</strong> Точное управление различными газовыми средами</li>
+                                <li><strong>Система контроля давления:</strong> Точная регулировка степени вакуума</li>
+                                <li><strong>Контроль потока:</strong> Точное управление потоком газа</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="optional-card">
+                            <h3>ПО и Данные</h3>
+                            <ul>
+                                <li><strong>Продвинутый пакет ПО:</strong> Больше функций управления и анализа</li>
+                                <li><strong>Анализ данных:</strong> Профессиональное ПО для обработки данных</li>
+                                <li><strong>Удаленный мониторинг:</strong> Система удаленного управления и контроля</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 联系咨询版块占位符 -->
+                <div id="contact-section-placeholder"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部通栏占位符 -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/common-modules-ru.js"></script>
+    
+    <!-- Image carousel JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.animated-image .product-image');
+            let currentIndex = 0;
+            let autoSlideInterval;
+            
+            function showImage(index) {
+                images.forEach(img => img.classList.remove('active'));
+                images[index].classList.add('active');
+                currentIndex = index;
+            }
+            
+            function showNextImage() {
+                const nextIndex = (currentIndex + 1) % images.length;
+                showImage(nextIndex);
+            }
+            
+            function showPrevImage() {
+                const prevIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(prevIndex);
+            }
+            
+            // Create manual control buttons
+            function createControls() {
+                const imageContainer = document.querySelector('.animated-image');
+                
+                // Create left arrow
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'image-nav-btn prev-btn';
+                prevBtn.innerHTML = '‹';
+                prevBtn.onclick = function() {
+                    showPrevImage();
+                    resetAutoSlide();
+                };
+                
+                // Create right arrow
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'image-nav-btn next-btn';
+                nextBtn.innerHTML = '›';
+                nextBtn.onclick = function() {
+                    showNextImage();
+                    resetAutoSlide();
+                };
+                
+                // Create indicators
+                const indicators = document.createElement('div');
+                indicators.className = 'image-indicators';
+                
+                for (let i = 0; i < images.length; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'indicator-dot';
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = function() {
+                        showImage(i);
+                        resetAutoSlide();
+                    };
+                    indicators.appendChild(dot);
+                }
+                
+                imageContainer.appendChild(prevBtn);
+                imageContainer.appendChild(nextBtn);
+                imageContainer.appendChild(indicators);
+            }
+            
+            function updateIndicators() {
+                const dots = document.querySelectorAll('.indicator-dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(() => {
+                    showNextImage();
+                    updateIndicators();
+                }, 7000);
+            }
+            
+            // Initialize
+            createControls();
+            
+            // Auto-switch every 7 seconds
+            autoSlideInterval = setInterval(() => {
+                showNextImage();
+                updateIndicators();
+            }, 7000);
+        });
+    </script>
+</body>
+</html>

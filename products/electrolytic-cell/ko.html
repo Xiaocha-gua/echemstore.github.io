@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞춤형 전해조 - 고정밀 | eChemStore</title>
+    <meta name="description" content="±0.5℃ 제어, 다중 챔버 설계, 1-25cm² 반응 면적을 갖춘 고정밀 맞춤형 전해조. H₂, CO₂ 연구를 위한 CNC 가공. 오늘 견적을 받아보세요!">
+    <meta name="keywords" content="맞춤형 전해조, 정밀 전기화학 장비, 다중 챔버 셀, 온도 제어 셀, CNC 전해조, 수소 생산, CO2 전기분해, 전기화학 연구, echemstore">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://echemstore.cn/product-electrolytic-cell-ko.html">
+    <meta property="og:title" content="맞춤형 전해조 - 고정밀 | eChemStore">
+    <meta property="og:description" content="±0.5℃ 제어, 다중 챔버 설계, 1-25cm² 반응 면적을 갖춘 고정밀 맞춤형 전해조. H₂, CO₂ 연구를 위한 CNC 가공. 오늘 견적을 받아보세요!">
+    <meta property="og:image" content="https://echemstore.cn/images/电解池1.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://echemstore.cn/product-electrolytic-cell-ko.html">
+    <meta property="twitter:title" content="맞춤형 전해조 - 고정밀 | eChemStore">
+    <meta property="twitter:description" content="±0.5℃ 제어, 다중 챔버 설계, 1-25cm² 반응 면적을 갖춘 고정밀 맞춤형 전해조. H₂, CO₂ 연구를 위한 CNC 가공. 오늘 견적을 받아보세요!">
+    <meta property="twitter:image" content="https://echemstore.cn/images/电解池1.png">
+    
+    <link rel="canonical" href="https://echemstore.cn/product-electrolytic-cell-ko.html">
+    <link rel="alternate" hreflang="ko" href="https://echemstore.cn/product-electrolytic-cell-ko.html">
+    <link rel="alternate" hreflang="en" href="https://echemstore.cn/product-electrolytic-cell-en.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://echemstore.cn/product-electrolytic-cell.html">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+        }
+        
+        .cell-image {
+            text-align: center;
+        }
+        
+        .product-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption h3 {
+            margin: 0 0 8px 0;
+            color: #0d47a1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .image-caption p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .animated-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .animated-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .animated-image img.active {
+            opacity: 1;
+        }
+        
+        .animated-image img:first-child {
+            position: relative;
+        }
+        
+        /* Manual control button styles */
+        .image-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .prev-btn {
+            left: 10px;
+        }
+        
+        .next-btn {
+            right: 10px;
+        }
+        
+        /* Indicator styles */
+        .image-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator-dot.active {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.2);
+        }
+        
+        .indicator-dot.active {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.2);
+        }
+        
+        .indicator-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .image-nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .prev-btn {
+                left: 5px;
+            }
+            
+            .next-btn {
+                right: 5px;
+            }
+            
+            .indicator-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">    
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P4S2R7G7');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "고정밀 전해조",
+        "description": "eChemStore는 수소 생산, CO₂ 전환 및 유기 전해 합성 연구를 위한 이중/삼중 챔버 구성, ±0.5℃ 온도 제어, 1×1cm²~25cm²의 맞춤형 반응 면적, 누출 방지 씰링이 포함된 CNC 가공을 갖춘 고정밀 전해조를 공급합니다.",
+        "brand": {
+            "@type": "Brand",
+            "name": "eChemStore"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "eChemStore",
+            "url": "https://echemstore.cn"
+        },
+        "category": "전기화학 장비",
+        "url": "https://echemstore.cn/product-electrolytic-cell-ko.html",
+        "image": [
+            "https://echemstore.cn/images/电解池1.png",
+            "https://echemstore.cn/images/电解池2.png",
+            "https://echemstore.cn/images/电解池3.png",
+            "https://echemstore.cn/images/电解池4.jpg",
+            "https://echemstore.cn/images/电解池5.png"
+        ],
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+        },
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "챔버 구성",
+                "value": "이중/삼중 챔버 옵션"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "온도 제어 정밀도",
+                "value": "±0.5℃"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "반응 면적",
+                "value": "1×1cm²~25cm² 사용자 정의 가능"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "작동 온도",
+                "value": "-20°C~80°C"
+            }
+        ]
+    }
+    </script>
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4S2R7G7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Top Bar Placeholder -->
+    <div id="top-bar-placeholder"></div>
+
+    <!-- Main Navigation Placeholder -->
+    <div id="main-nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Service Overview -->
+                <div class="service-overview">
+                    <div class="service-header">
+                        <h1>전해조 - 다중 챔버 전기화학 장비</h1>
+                        <p class="service-subtitle">유연한 구성 · 정밀 제조 · 맞춤형 솔루션</p>
+                    </div>
+                    
+                    <div class="service-intro">
+                    <div class="intro-content">
+                        <div class="intro-text">
+                            <h2>제품 개요</h2>
+                            <p>누출 방지 씰링을 위한 CNC 가공으로 정밀하게 설계된 전해조. 이중/삼중 챔버 구성, 선택적 온도 제어, 1×1cm²~5×5cm²의 맞춤형 반응 면적.</p>
+                            
+                            <h2>주요 특징</h2>
+                            <ul class="feature-list">
+                                <li><strong>다중 챔버 설계:</strong> 이중/삼중 챔버 옵션</li>
+                                <li><strong>온도 제어:</strong> ±0.5℃ 정밀도</li>
+                                <li><strong>맞춤형:</strong> 반응 면적, 재료, 유로</li>
+                                <li><strong>다용도 응용:</strong> 연구에서 산업적 사용까지</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-image">
+                            <div class="animated-image">
+                                <img src="../../images/电解池1.png" alt="전해조 제품 - 다중 챔버 전기화학 장비" class="product-image active">
+                                <img src="../../images/电解池2.png" alt="전해조 구조 - 이중 챔버 구성" class="product-image">
+                                <img src="../../images/电解池3.png" alt="전해조 내부 구조 - 정밀 가공" class="product-image">
+                                <img src="../../images/电解池4.jpg" alt="전해조 물리적 유닛 - 온도 제어 기능" class="product-image">
+                                <img src="../../images/电解池5.png" alt="전해조 인터페이스 설계 - 표준 Swagelok 피팅" class="product-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Configuration Options -->
+                <div class="technical-advantages">
+                    <h2>구성 옵션</h2>
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+                                    <rect x="20" y="20" width="8" height="20" fill="#4caf50" opacity="0.7"/>
+                                    <rect x="32" y="20" width="8" height="20" fill="#4caf50" opacity="0.7"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#4caf50">2/3 챔버</text>
+                                </svg>
+                            </div>
+                            <h3>챔버 구조</h3>
+                            <p><strong>이중 챔버:</strong> 분리된 양극액/음극액 구획<br>
+                            <strong>삼중 챔버:</strong> 추가 참조 전극 구획</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="8" fill="none" stroke="#ff9800" stroke-width="2"/>
+                                    <path d="M30 22 L30 38 M22 30 L38 30" stroke="#ff9800" stroke-width="2"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff9800">±0.5℃</text>
+                                </svg>
+                            </div>
+                            <h3>온도 제어</h3>
+                            <p><strong>표준:</strong> -20°C~80°C 작동 범위<br>
+                            <strong>제어형:</strong> ±0.5℃ 정밀도</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                                    <rect x="20" y="20" width="20" height="20" fill="none" stroke="#9c27b0" stroke-width="2"/>
+                                    <text x="30" y="35" text-anchor="middle" font-family="Arial" font-size="10" fill="#9c27b0">1×1</text>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#9c27b0">~25cm²</text>
+                                </svg>
+                            </div>
+                            <h3>반응 면적 및 재료</h3>
+                            <p><strong>면적:</strong> 1×1cm²~25cm² 사용자 정의 가능<br>
+                            <strong>재료:</strong> PMMA/PTFE, 316L 강철, 니켈, 티타늄</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e1f5fe" stroke="#00bcd4" stroke-width="2"/>
+                                    <path d="M15 30 Q30 20 45 30" stroke="#00bcd4" stroke-width="2" fill="none"/>
+                                    <circle cx="15" cy="30" r="2" fill="#00bcd4"/>
+                                    <circle cx="45" cy="30" r="2" fill="#00bcd4"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#00bcd4">1/4"</text>
+                                </svg>
+                            </div>
+                            <h3>연결 및 유로</h3>
+                            <p><strong>연결:</strong> 표준 1/4" Swagelok 피팅<br>
+                            <strong>흐름 설계:</strong> 사행/평행 패턴 사용 가능</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Advantages -->
+                <div class="technical-advantages">
+                    <h2>핵심 장점</h2>
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+                                    <path d="M20 30 L25 35 L40 20" stroke="#4caf50" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#4caf50">CNC</text>
+                                </svg>
+                            </div>
+                            <h3>정밀 제조</h3>
+                            <p><strong>CNC 가공</strong>은 누출 방지 씰링과 재현 가능한 결과를 보장합니다</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+                                    <path d="M15 35 Q30 20 45 35" stroke="#ff9800" stroke-width="3" fill="none"/>
+                                    <path d="M20 40 Q30 25 40 40" stroke="#ff9800" stroke-width="2" fill="none"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#ff9800">효율적</text>
+                                </svg>
+                            </div>
+                            <h3>향상된 물질 전달</h3>
+                            <p><strong>최적화된 유로</strong>는 반응 효율을 향상시킵니다</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="12" fill="none" stroke="#9c27b0" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="3" fill="#9c27b0"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#9c27b0">시각적</text>
+                                </svg>
+                            </div>
+                            <h3>시각적 모니터링</h3>
+                            <p><strong>투명한 창</strong>을 통해 실시간 반응 모니터링이 가능합니다</p>
+                        </div>
+                        
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="30" cy="30" r="25" fill="#e1f5fe" stroke="#00bcd4" stroke-width="2"/>
+                                    <rect x="20" y="20" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <rect x="32" y="20" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <rect x="20" y="32" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <rect x="32" y="32" width="8" height="8" fill="#00bcd4" opacity="0.7"/>
+                                    <text x="30" y="50" text-anchor="middle" font-family="Arial" font-size="8" fill="#00bcd4">유연한</text>
+                                </svg>
+                            </div>
+                            <h3>시스템 호환성</h3>
+                            <p><strong>다용도 설계</strong>는 MEA 및 3전극 시스템을 지원합니다</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Fields -->
+                <div class="technical-details">
+                    <h2>응용 분야</h2>
+                    <div class="details-content-single">
+                        <div class="details-text-full">
+                            <div class="specifications-section">
+                                <div class="specs-grid-four-columns">
+                                    <div class="spec-category">
+                                        <h4>에너지 응용</h4>
+                                        <ul>
+                                            <li>그린 수소 생산</li>
+                                            <li>흐름 전지 테스트</li>
+                                            <li>연료 전지 연구</li>
+                                        </ul>
+                                    </div>
+                                    <div class="spec-category">
+                                        <h4>환경 및 탄소</h4>
+                                        <ul>
+                                            <li>CO₂ 환원 연구</li>
+                                            <li>CO₂-연료 전환</li>
+                                            <li>탄소 포집 및 활용</li>
+                                        </ul>
+                                    </div>
+                                    <div class="spec-category">
+                                        <h4>화학 합성</h4>
+                                        <ul>
+                                            <li>유기 전해 합성</li>
+                                            <li>촉매 평가</li>
+                                            <li>반응 메커니즘 연구</li>
+                                        </ul>
+                                    </div>
+                                    <div class="spec-category">
+                                        <h4>연구 및 테스트</h4>
+                                        <ul>
+                                            <li>실험실 테스트</li>
+                                            <li>MEA 검증</li>
+                                            <li>다중 전극 연구</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section Placeholder -->
+                <div id="contact-section-placeholder"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/common-modules-ko.js"></script>
+    <script>
+        // Image carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.animated-image img');
+            let currentIndex = 0;
+            let autoSlideInterval;
+            
+            function showImage(index) {
+                // Hide all images
+                images.forEach(img => img.classList.remove('active'));
+                
+                // Show specified image
+                images[index].classList.add('active');
+                currentIndex = index;
+            }
+            
+            function showNextImage() {
+                const nextIndex = (currentIndex + 1) % images.length;
+                showImage(nextIndex);
+            }
+            
+            function showPrevImage() {
+                const prevIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(prevIndex);
+            }
+            
+            // Create manual control buttons
+            function createControls() {
+                const imageContainer = document.querySelector('.animated-image');
+                
+                // Create left arrow
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'image-nav-btn prev-btn';
+                prevBtn.innerHTML = '‹';
+                prevBtn.onclick = function() {
+                    showPrevImage();
+                    resetAutoSlide();
+                };
+                
+                // Create right arrow
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'image-nav-btn next-btn';
+                nextBtn.innerHTML = '›';
+                nextBtn.onclick = function() {
+                    showNextImage();
+                    resetAutoSlide();
+                };
+                
+                // Create indicators
+                const indicators = document.createElement('div');
+                indicators.className = 'image-indicators';
+                
+                for (let i = 0; i < images.length; i++) {
+                    const dot = document.createElement('span');
+                    dot.className = 'indicator-dot';
+                    if (i === 0) dot.classList.add('active');
+                    dot.onclick = function() {
+                        showImage(i);
+                        resetAutoSlide();
+                    };
+                    indicators.appendChild(dot);
+                }
+                
+                imageContainer.appendChild(prevBtn);
+                imageContainer.appendChild(nextBtn);
+                imageContainer.appendChild(indicators);
+            }
+            
+            function updateIndicators() {
+                const dots = document.querySelectorAll('.indicator-dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(() => {
+                    showNextImage();
+                    updateIndicators();
+                }, 7000);
+            }
+            
+            // Initialize
+            createControls();
+            
+            // Auto-slide every 7 seconds
+            autoSlideInterval = setInterval(() => {
+                showNextImage();
+                updateIndicators();
+            }, 7000);
+        });
+    </script>
+</body>
+</html>
