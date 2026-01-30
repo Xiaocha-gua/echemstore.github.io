@@ -1,7 +1,7 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import OpenAI from 'openai';
-import { checkRateLimit, checkTokenLimit, incrementTokenUsage } from '../lib/rateLimit';
-import { findJournal } from '../lib/fuzzyMatch';
+import { checkRateLimit, checkTokenLimit, incrementTokenUsage } from '../lib/rateLimit.js';
+import { findJournal } from '../lib/fuzzyMatch.js';
 import * as fs from 'fs';
 import * as path from 'path';
 
